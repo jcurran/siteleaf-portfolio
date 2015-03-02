@@ -1,0 +1,123 @@
+body {
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+  font-size: 22px;
+  line-height: 1.5;
+  background-color: #f8f8f8;
+}
+
+/* Layout 
+================================ */
+
+.wrap {
+  margin: 0;
+  max-width: 100%;
+  width: 100%;
+  background-color: #fff;
+}
+.subwrap {
+  margin: 0 auto;
+  max-width: 1200px;
+  overflow: hidden;
+  width: 100%;
+  background-color: #fff;
+}
+.primary-header {
+  float: right;
+  width: 30%;
+  padding: 15px;
+  background-color: #fff;
+}
+.subpage-menu {
+  float: right;
+  clear: right;
+  width: 30%;
+  padding: 15px;
+  font-size: .85em;
+  a {
+    display: block;
+  }
+}
+.subpage-feature {
+  height: 300px;
+  min-height: 300px;
+  display: block;
+  background-color: #fff;
+  clear: right;
+  padding: 15px;
+}
+.subpage-content {
+  display: block;
+  background-color: white;
+  clear: right;
+  padding: 15px;
+  width: 62.5%;
+}
+.content {
+  float: left;
+  width: 62.5%;
+  padding: 15px;
+}
+.site-title {
+    margin-top: .75em;
+}
+.content-title {
+  margin-top: .25em;
+  line-height: 1.05;
+}
+.page-menu {
+  margin: 0 0 15px;
+}
+
+@media only screen and (max-width: 1085px) {
+  body {
+    font-size: 16px;
+  }
+  .wrap {
+    margin: 0 auto;
+  }
+  .subwrap {
+    background-color: #fff;
+  }
+  .primary-header, .content, .subpage-menu {
+    float: none;
+    width: auto;
+  }
+  .primary-header {
+    background-color: #fff;
+  }
+  .subpage-content {
+    width: auto;
+  }
+  section {
+    padding: 15px;
+  }
+}
+
+/* Text 
+================================ */
+
+a {
+  color: #ff8000;
+  &.back {
+    font-size: .8em;
+  }
+}
+h1, h2, h3, h4 {
+  margin-top: 1.5em;
+  margin-bottom: .75em;
+  font-weight: 600;
+}
+p {
+  margin-bottom: 1em;
+}
+
+/* Lightbox */
+
+.lb-data .lb-caption {
+  color: #ffa000;
+}
+.lb-data .lb-number {
+  color: #eee;
+}
+
+/* I got 99 problems, but this last line ain't one */
