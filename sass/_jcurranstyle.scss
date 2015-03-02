@@ -12,20 +12,20 @@ body {
   margin: 0;
   max-width: 100%;
   width: 100%;
-  background-color: #fff;
+  background-color: #eee;
 }
 .subwrap {
   margin: 0 auto;
   max-width: 1200px;
   overflow: hidden;
   width: 100%;
-  background-color: #fff;
+  background-color: #eee;
 }
 .primary-header {
   float: right;
   width: 30%;
   padding: 15px;
-  background-color: #fff;
+  background-color: #eee;
 }
 .subpage-menu {
   float: right;
@@ -41,13 +41,13 @@ body {
   height: 300px;
   min-height: 300px;
   display: block;
-  background-color: #fff;
+  background-color: #eee;
   clear: right;
   padding: 15px;
 }
 .subpage-content {
   display: block;
-  background-color: white;
+  background-color: #eee;
   clear: right;
   padding: 15px;
   width: 62.5%;
@@ -55,7 +55,7 @@ body {
 .content {
   float: left;
   width: 62.5%;
-  padding: 15px;
+  padding: 0;
 }
 .site-title {
     margin-top: .75em;
@@ -63,11 +63,12 @@ body {
 .content-title {
   margin-top: .25em;
   line-height: 1.05;
+  padding: 15px;
 }
 .page-menu {
   margin: 0 0 15px;
 }
-
+// smaller
 @media only screen and (max-width: 1085px) {
   body {
     font-size: 16px;
@@ -87,8 +88,9 @@ body {
   }
   .subpage-content {
     width: auto;
+    padding: 15px;
   }
-  section {
+  .content-title {
     padding: 15px;
   }
 }
@@ -110,14 +112,22 @@ h1, h2, h3, h4 {
 p {
   margin-bottom: 1em;
 }
+.caption {
+  font-size: .85em;
+  line-height: 1.2;
+  max-width: 67%;
+  color: #ff8000;
+  margin-bottom: 1.5em;
+}
 
 /* Lightbox */
 
 .lb-data .lb-caption {
-  color: #ffa000;
+  color: #ff9000;
+  font-weight: 400;
 }
 .lb-data .lb-number {
-  color: #eee;
+  color: #ddd;
 }
 
 /* I got 99 problems, but this last line ain't one */
