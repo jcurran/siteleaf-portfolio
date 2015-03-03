@@ -1,8 +1,10 @@
+html {
+  background-color: #eee;
+}
 body {
   font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
   font-size: 22px;
   line-height: 1.5;
-  background-color: #f8f8f8;
   color: #444;
 }
 
@@ -22,45 +24,53 @@ body {
   width: 100%;
   background-color: #eee;
 }
-.primary-header {
+.primary-header, aside {
   float: right;
+  clear: right;
   width: 30%;
   padding: 15px;
+  background-color: #eee;
+}
+aside {
   background-color: #eee;
 }
 .subpage-menu {
-  float: right;
-  clear: right;
-  width: 30%;
-  padding: 15px;
+  margin: 0 0 15px;
   font-size: .85em;
-  a {
-    display: block;
+  li {
+    border-top: 1px dotted #d4d7d9;
+    margin: 0.5em 0 0;
+    padding: 0.5em 0 0;
+    list-style: none;
   }
 }
-.subpage-feature {
-  display: block;
-  background-color: #eee;
-  clear: right;
-  padding: 0 15px;
-}
-.subpage-content {
-  display: block;
-  background-color: #eee;
-  clear: right;
-  padding: 15px;
-  width: 62.5%;
-  img {
-    border-bottom: 1px solid #ff8000;
-  }
-}
+//.subpage-feature {
+//  display: block;
+//  background-color: #eee;
+//  clear: right;
+//  padding: 0 15px;
+//}
+//.subpage-content {
+//  display: block;
+//  background-color: #eee;
+//  clear: right;
+//  padding: 15px;
+//  width: 62.5%;
+//  img {
+//    border-bottom: 1px solid #ff8000;
+//  }
+//}
 .content {
   float: left;
   width: 62.5%;
-  padding: 0;
+  padding: 15px;
+  img {
+    border-bottom: 2px solid #ff8000;
+  }
 }
 .content-sub {
   padding: 0 15px;
+  float: left;
 }
 .site-title {
   margin-top: .75em;
@@ -68,23 +78,28 @@ body {
 .content-title {
   margin-top: .25em;
   line-height: 1.05;
-  padding: 15px;
 }
 .page-menu {
   margin: 0 0 15px;
 }
-.copyright {
-  float: right;
-  width: 30%;
-  padding: 15px;
+
+footer {
+  background-color: #eee;
+  float: left;
+  width: 100%;
+  height: auto;
+  clear: both;
   font-size: .7em;
   p {
-    color: #aaa;    
+    color: #aaa;
   }
 }
-.whence {
+.whence, .copyright {
   padding: 15px;
+  float: left;
+  clear: left;
 }
+
 // smaller
 @media only screen and (max-width: 1085px) {
   body {
@@ -94,21 +109,25 @@ body {
     margin: 0 auto;
   }
   .subwrap {
-    background-color: #fff;
+    background-color: #eee;
   }
-  .primary-header, .content, .subpage-menu, .copyright {
+  .primary-header, .content, .subpage-menu, aside {
     float: none;
     width: auto;
   }
   .primary-header {
-    background-color: #fff;
+    background-color: #eee;
   }
-  .subpage-content {
-    width: auto;
-    padding: 15px;
-  }
+//  .subpage-content {
+//    width: auto;
+//    padding: 15px;
+//  }
   .content-title {
-    padding: 15px;
+    padding: 0;
+  }
+  aside {
+    margin: 0;
+    padding: 0 15px;
   }
 }
 
@@ -118,7 +137,6 @@ body {
 a {
   color: #ff8000;
   &.back {
-    font-size: .7em;
   }
 }
 h1, h2, h3, h4 {
@@ -147,5 +165,11 @@ p {
 .lb-data .lb-number {
   color: #ddd;
 }
+
+
+
+
+
+
 
 /* I got 99 problems, but this last line ain't one */
