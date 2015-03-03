@@ -3,6 +3,7 @@ body {
   font-size: 22px;
   line-height: 1.5;
   background-color: #f8f8f8;
+  color: #444;
 }
 
 /* Layout 
@@ -38,12 +39,10 @@ body {
   }
 }
 .subpage-feature {
-  height: 300px;
-  min-height: 300px;
   display: block;
   background-color: #eee;
   clear: right;
-  padding: 15px;
+  padding: 0 15px;
 }
 .subpage-content {
   display: block;
@@ -51,14 +50,20 @@ body {
   clear: right;
   padding: 15px;
   width: 62.5%;
+  img {
+    border-bottom: 1px solid #ff8000;
+  }
 }
 .content {
   float: left;
   width: 62.5%;
   padding: 0;
 }
+.content-sub {
+  padding: 0 15px;
+}
 .site-title {
-    margin-top: .75em;
+  margin-top: .75em;
 }
 .content-title {
   margin-top: .25em;
@@ -67,6 +72,18 @@ body {
 }
 .page-menu {
   margin: 0 0 15px;
+}
+.copyright {
+  float: right;
+  width: 30%;
+  padding: 15px;
+  font-size: .7em;
+  p {
+    color: #aaa;    
+  }
+}
+.whence {
+  padding: 15px;
 }
 // smaller
 @media only screen and (max-width: 1085px) {
@@ -79,7 +96,7 @@ body {
   .subwrap {
     background-color: #fff;
   }
-  .primary-header, .content, .subpage-menu {
+  .primary-header, .content, .subpage-menu, .copyright {
     float: none;
     width: auto;
   }
@@ -101,7 +118,7 @@ body {
 a {
   color: #ff8000;
   &.back {
-    font-size: .8em;
+    font-size: .7em;
   }
 }
 h1, h2, h3, h4 {
@@ -111,6 +128,7 @@ h1, h2, h3, h4 {
 }
 p {
   margin-bottom: 1em;
+  color: #666;
 }
 .caption {
   font-size: .85em;

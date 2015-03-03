@@ -427,11 +427,12 @@ body {
   font-size: 22px;
   line-height: 1.5;
   background-color: #f8f8f8;
+  color: #444;
 }
 
 /* Layout 
 ================================ */
-/* line 11, ../sass/_jcurranstyle.scss */
+/* line 12, ../sass/_jcurranstyle.scss */
 .wrap {
   margin: 0;
   max-width: 100%;
@@ -439,7 +440,7 @@ body {
   background-color: #eee;
 }
 
-/* line 17, ../sass/_jcurranstyle.scss */
+/* line 18, ../sass/_jcurranstyle.scss */
 .subwrap {
   margin: 0 auto;
   max-width: 1200px;
@@ -448,7 +449,7 @@ body {
   background-color: #eee;
 }
 
-/* line 24, ../sass/_jcurranstyle.scss */
+/* line 25, ../sass/_jcurranstyle.scss */
 .primary-header {
   float: right;
   width: 30%;
@@ -456,7 +457,7 @@ body {
   background-color: #eee;
 }
 
-/* line 30, ../sass/_jcurranstyle.scss */
+/* line 31, ../sass/_jcurranstyle.scss */
 .subpage-menu {
   float: right;
   clear: right;
@@ -464,22 +465,20 @@ body {
   padding: 15px;
   font-size: .85em;
 }
-/* line 36, ../sass/_jcurranstyle.scss */
+/* line 37, ../sass/_jcurranstyle.scss */
 .subpage-menu a {
   display: block;
 }
 
-/* line 40, ../sass/_jcurranstyle.scss */
+/* line 41, ../sass/_jcurranstyle.scss */
 .subpage-feature {
-  height: 300px;
-  min-height: 300px;
   display: block;
   background-color: #eee;
   clear: right;
-  padding: 15px;
+  padding: 0 15px;
 }
 
-/* line 48, ../sass/_jcurranstyle.scss */
+/* line 47, ../sass/_jcurranstyle.scss */
 .subpage-content {
   display: block;
   background-color: #eee;
@@ -487,93 +486,120 @@ body {
   padding: 15px;
   width: 62.5%;
 }
+/* line 53, ../sass/_jcurranstyle.scss */
+.subpage-content img {
+  border-bottom: 1px solid #ff8000;
+}
 
-/* line 55, ../sass/_jcurranstyle.scss */
+/* line 57, ../sass/_jcurranstyle.scss */
 .content {
   float: left;
   width: 62.5%;
   padding: 0;
 }
 
-/* line 60, ../sass/_jcurranstyle.scss */
+/* line 62, ../sass/_jcurranstyle.scss */
+.content-sub {
+  padding: 0 15px;
+}
+
+/* line 65, ../sass/_jcurranstyle.scss */
 .site-title {
   margin-top: .75em;
 }
 
-/* line 63, ../sass/_jcurranstyle.scss */
+/* line 68, ../sass/_jcurranstyle.scss */
 .content-title {
   margin-top: .25em;
   line-height: 1.05;
   padding: 15px;
 }
 
-/* line 68, ../sass/_jcurranstyle.scss */
+/* line 73, ../sass/_jcurranstyle.scss */
 .page-menu {
   margin: 0 0 15px;
 }
 
+/* line 76, ../sass/_jcurranstyle.scss */
+.copyright {
+  float: right;
+  width: 30%;
+  padding: 15px;
+  font-size: .7em;
+}
+/* line 81, ../sass/_jcurranstyle.scss */
+.copyright p {
+  color: #aaa;
+}
+
+/* line 85, ../sass/_jcurranstyle.scss */
+.whence {
+  padding: 15px;
+}
+
 @media only screen and (max-width: 1085px) {
-  /* line 73, ../sass/_jcurranstyle.scss */
+  /* line 90, ../sass/_jcurranstyle.scss */
   body {
     font-size: 16px;
   }
 
-  /* line 76, ../sass/_jcurranstyle.scss */
+  /* line 93, ../sass/_jcurranstyle.scss */
   .wrap {
     margin: 0 auto;
   }
 
-  /* line 79, ../sass/_jcurranstyle.scss */
+  /* line 96, ../sass/_jcurranstyle.scss */
   .subwrap {
     background-color: #fff;
   }
 
-  /* line 82, ../sass/_jcurranstyle.scss */
-  .primary-header, .content, .subpage-menu {
+  /* line 99, ../sass/_jcurranstyle.scss */
+  .primary-header, .content, .subpage-menu, .copyright {
     float: none;
     width: auto;
   }
 
-  /* line 86, ../sass/_jcurranstyle.scss */
+  /* line 103, ../sass/_jcurranstyle.scss */
   .primary-header {
     background-color: #fff;
   }
 
-  /* line 89, ../sass/_jcurranstyle.scss */
+  /* line 106, ../sass/_jcurranstyle.scss */
   .subpage-content {
     width: auto;
     padding: 15px;
   }
 
-  /* line 93, ../sass/_jcurranstyle.scss */
+  /* line 110, ../sass/_jcurranstyle.scss */
   .content-title {
     padding: 15px;
   }
 }
 /* Text 
 ================================ */
-/* line 101, ../sass/_jcurranstyle.scss */
+/* line 118, ../sass/_jcurranstyle.scss */
 a {
   color: #ff8000;
 }
-/* line 103, ../sass/_jcurranstyle.scss */
+/* line 120, ../sass/_jcurranstyle.scss */
 a.back {
-  font-size: .8em;
+  font-size: .7em;
 }
 
-/* line 107, ../sass/_jcurranstyle.scss */
+/* line 124, ../sass/_jcurranstyle.scss */
 h1, h2, h3, h4 {
   margin-top: 1.5em;
   margin-bottom: .75em;
   font-weight: 600;
 }
 
-/* line 112, ../sass/_jcurranstyle.scss */
+/* line 129, ../sass/_jcurranstyle.scss */
 p {
   margin-bottom: 1em;
+  color: #666;
 }
 
-/* line 115, ../sass/_jcurranstyle.scss */
+/* line 133, ../sass/_jcurranstyle.scss */
 .caption {
   font-size: .85em;
   line-height: 1.2;
@@ -583,13 +609,13 @@ p {
 }
 
 /* Lightbox */
-/* line 125, ../sass/_jcurranstyle.scss */
+/* line 143, ../sass/_jcurranstyle.scss */
 .lb-data .lb-caption {
   color: #ff9000;
   font-weight: 400;
 }
 
-/* line 129, ../sass/_jcurranstyle.scss */
+/* line 147, ../sass/_jcurranstyle.scss */
 .lb-data .lb-number {
   color: #ddd;
 }
