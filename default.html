@@ -49,7 +49,7 @@
                     <nav>
                         <ul class="page-menu">
                             {% for page in site.pages %}
-                            <li><a href="{{page.url}}"{% if page.url == url %} class="is-current-page"{% endif %}>{{page.title}}</a></li>
+                                <li><a href="{{page.url}}"{% if page.url == url %} class="is-current-page"{% endif %}>{{page.title}}</a></li>
                             {% endfor %}
                         </ul>
                     </nav>
@@ -64,32 +64,30 @@
                     <!-- if PAGES -->
                     {% if pages %}
                         {% comment %} Show subpage menu if available {% endcomment %}
-                        <ul class="subpage-menu">
+                            <ul class="subpage-menu">
                         {% for subpage in pages %}
-                            <li><a href="{{subpage.url}}">{{subpage.title}}</a></li>
+                                <li><a href="{{subpage.url}}">{{subpage.title}}</a></li>
                         {% endfor %}
-                        </ul>
+                            </ul>
                     {% endif %}
                 </aside>
                 
                 <footer>
                     <!-- if PARENT -->
                     {% if parent %}
-                    <div class="whence"><a href="{{parent.url}}" class="back">&larr; Back to {{parent.title}}</a></div>
+                        <div class="whence"><a href="{{parent.url}}" class="back">&larr; Back to {{parent.title}}</a></div>
                     {% else %}
-                    <div class="whence"><a href="{{current.url}}" class="back">&larr; Top</a></div>
+                        <div class="whence"><a href="{{current.url}}" class="back">&larr; Top</a></div>
                     {% endif %}
-                    <div class="copyright">&copy; 2015 Jim Curran</div>
+                        <div class="copyright">&copy; 2015 Jim Curran</div>
                 </footer>
             </div>
         </div><!-- /wrap -->
 
+        <!-- jQuery + JS -->
         <script src="/js/jquery-1.11.0.min.js"></script>
         <script src="/js/lightbox.min.js"></script>
-        <script src="/js/vendor/jquery-2.1.0.min.js"></script>
         <script src="/js/helper.js"></script>
-        <script src="/js/main.js"></script>
-
         <!-- Google Analytics -->
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

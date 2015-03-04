@@ -465,134 +465,178 @@ body {
 /* line 34, ../sass/_jcurranstyle.scss */
 aside {
   background-color: #eee;
-}
-
-/* line 37, ../sass/_jcurranstyle.scss */
-.subpage-menu {
-  margin: 0 0 15px;
   font-size: .85em;
 }
-/* line 40, ../sass/_jcurranstyle.scss */
+
+/* line 38, ../sass/_jcurranstyle.scss */
+.subpage-menu {
+  margin: 0 0 15px;
+  font-size: .8em;
+}
+/* line 41, ../sass/_jcurranstyle.scss */
 .subpage-menu li {
   border-top: 1px dotted #d4d7d9;
   margin: 0.5em 0 0;
   padding: 0.5em 0 0;
   list-style: none;
 }
+/* line 46, ../sass/_jcurranstyle.scss */
+.subpage-menu li a {
+  color: #ff8000;
+}
+/* line 49, ../sass/_jcurranstyle.scss */
+.subpage-menu li a:visited {
+  color: #222;
+}
+/* line 50, ../sass/_jcurranstyle.scss */
+.subpage-menu li a:hover {
+  color: #ff8000;
+}
+/* line 51, ../sass/_jcurranstyle.scss */
+.subpage-menu li a:active {
+  color: #222;
+}
 
-/* line 63, ../sass/_jcurranstyle.scss */
+/* line 71, ../sass/_jcurranstyle.scss */
 .content {
   float: left;
   width: 62.5%;
   padding: 15px;
+  background-color: #fff;
 }
-/* line 67, ../sass/_jcurranstyle.scss */
+/* line 76, ../sass/_jcurranstyle.scss */
 .content img {
   border-bottom: 2px solid #ff8000;
 }
 
-/* line 71, ../sass/_jcurranstyle.scss */
+/* line 83, ../sass/_jcurranstyle.scss */
 .content-sub {
   padding: 0 15px;
   float: left;
 }
 
-/* line 75, ../sass/_jcurranstyle.scss */
+/* line 87, ../sass/_jcurranstyle.scss */
 .site-title {
   margin-top: .75em;
 }
 
-/* line 78, ../sass/_jcurranstyle.scss */
+/* line 90, ../sass/_jcurranstyle.scss */
 .content-title {
   margin-top: .25em;
   line-height: 1.05;
 }
 
-/* line 82, ../sass/_jcurranstyle.scss */
+/* line 94, ../sass/_jcurranstyle.scss */
 .page-menu {
   margin: 0 0 15px;
 }
 
-/* line 86, ../sass/_jcurranstyle.scss */
+/* line 98, ../sass/_jcurranstyle.scss */
 footer {
-  background-color: #eee;
+  background-color: #fff;
   float: left;
-  width: 100%;
-  height: auto;
+  width: 62.5%;
   clear: both;
-  font-size: .7em;
+  font-size: .75em;
+  padding: 15px;
 }
-/* line 93, ../sass/_jcurranstyle.scss */
+/* line 105, ../sass/_jcurranstyle.scss */
 footer p {
   color: #aaa;
 }
 
-/* line 97, ../sass/_jcurranstyle.scss */
+/* line 109, ../sass/_jcurranstyle.scss */
 .whence, .copyright {
-  padding: 15px;
+  padding: 15px 0;
   float: left;
   clear: left;
 }
 
 @media only screen and (max-width: 1085px) {
-  /* line 105, ../sass/_jcurranstyle.scss */
+  /* line 117, ../sass/_jcurranstyle.scss */
   body {
     font-size: 16px;
   }
 
-  /* line 108, ../sass/_jcurranstyle.scss */
+  /* line 120, ../sass/_jcurranstyle.scss */
   .wrap {
     margin: 0 auto;
   }
 
-  /* line 111, ../sass/_jcurranstyle.scss */
+  /* line 123, ../sass/_jcurranstyle.scss */
   .subwrap {
     background-color: #eee;
   }
 
-  /* line 114, ../sass/_jcurranstyle.scss */
+  /* line 126, ../sass/_jcurranstyle.scss */
   .primary-header, .content, .subpage-menu, aside {
     float: none;
     width: auto;
   }
 
-  /* line 118, ../sass/_jcurranstyle.scss */
+  /* line 130, ../sass/_jcurranstyle.scss */
   .primary-header {
+    background-color: #fff;
+  }
+
+  /* line 133, ../sass/_jcurranstyle.scss */
+  .content {
     background-color: #eee;
   }
 
-  /* line 125, ../sass/_jcurranstyle.scss */
+  /* line 140, ../sass/_jcurranstyle.scss */
   .content-title {
     padding: 0;
   }
 
-  /* line 128, ../sass/_jcurranstyle.scss */
+  /* line 143, ../sass/_jcurranstyle.scss */
   aside {
     margin: 0;
     padding: 0 15px;
   }
+
+  /* line 147, ../sass/_jcurranstyle.scss */
+  footer {
+    width: 100%;
+  }
 }
 /* Text 
 ================================ */
-/* line 137, ../sass/_jcurranstyle.scss */
+/* line 155, ../sass/_jcurranstyle.scss */
 a {
   color: #ff8000;
 }
+/* line 158, ../sass/_jcurranstyle.scss */
+a:visited {
+  color: #ff8000;
+}
+/* line 159, ../sass/_jcurranstyle.scss */
+a:hover {
+  color: #222;
+}
+/* line 160, ../sass/_jcurranstyle.scss */
+a:active {
+  color: #ff8000;
+}
+/* line 161, ../sass/_jcurranstyle.scss */
+a.is-current-page {
+  color: #222;
+}
 
-/* line 142, ../sass/_jcurranstyle.scss */
+/* line 164, ../sass/_jcurranstyle.scss */
 h1, h2, h3, h4 {
   margin-top: 1.5em;
   margin-bottom: .75em;
   font-weight: 600;
 }
 
-/* line 147, ../sass/_jcurranstyle.scss */
+/* line 169, ../sass/_jcurranstyle.scss */
 p {
   margin-bottom: 1em;
   color: #666;
 }
 
-/* line 151, ../sass/_jcurranstyle.scss */
+/* line 173, ../sass/_jcurranstyle.scss */
 .caption {
   font-size: .85em;
   line-height: 1.2;
@@ -602,13 +646,13 @@ p {
 }
 
 /* Lightbox */
-/* line 161, ../sass/_jcurranstyle.scss */
+/* line 183, ../sass/_jcurranstyle.scss */
 .lb-data .lb-caption {
   color: #ff9000;
   font-weight: 400;
 }
 
-/* line 165, ../sass/_jcurranstyle.scss */
+/* line 187, ../sass/_jcurranstyle.scss */
 .lb-data .lb-number {
   color: #ddd;
 }
