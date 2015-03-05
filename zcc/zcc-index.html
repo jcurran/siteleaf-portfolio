@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<head>
+    <title>ZoomSafer Control Center</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/stylesheets/zcc-styles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="navbar-icon"><a class="navbar-brand" href="zcc-index.html">ZoomSafer Control Center</a></div>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/projects/zoomsafer-configuration-portal">Log Out</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 col-md-6 col-md-offset-3">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#">Account</a></li>
+                    <li><a href="zcc-settings.html">Settings</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-md-6 col-md-offset-3">
+                <h3>Profile</h3>
+                <p>Your email, password and security question and answer.</p>
+                <form role="form" id="toggling-form">
+                    <div class="form-group">
+                        <label for="inputRegistrationEmail">Email</label>
+                        <input type="email" class="form-control" id="inputRegistrationEmail" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <button type="button" id="password-btn" class="btn btn-link" data-toggle="#password">Change Password</button>
+                        <button type="button" id="security-qa-btn" class="btn btn-link" data-toggle="#security-qa">Change Security Q/A</button>
+                    </div>
+                    <div id="password" style="display:none">
+                        <div class="form-group">
+                            <label for="inputPassword">Password</label>
+                            <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                        </div>
+                        <div class="form-group">
+                            <label for="repeatPassword">Password</label>
+                            <input type="password" class="form-control" id="repeatPassword" placeholder="Repeat password">
+                        </div>
+                    </div>
+                    <div id="security-qa" style="display:none">
+                        <div class="form-group">
+                            <label for="inputSecurityQuestion">Security Question</label>
+                            <input type="secquestion" class="form-control" id="inputSecurityQuestion" placeholder="Security question">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputSecurityAnswer">Security Answer</label>
+                            <input type="secanswer" class="form-control" id="inputSecurityAnswer" placeholder="Security answer">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-md-6 col-md-offset-3">
+                <h3>Billing</h3>
+                <p>Secure 128-bit SSL encryption.</p>
+                <form role="form">
+                    <div class="form-group">
+                        <label for="inputCreditCardNumber">Credit Card Number</label>
+                        <input type="ccnumber" class="form-control" id="inputCreditCardNumber" placeholder="Credit Card Number">
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-xs-6 col-md-3 form-group">
+                                <label for="selectExpDate">Expiration</label>
+                                <select class="form-control">
+                                    <option>Month</option>
+                                </select>
+                            </div>
+                            <div class="col-xs-6 col-md-3 form-group">
+                                <label for="selectExpDate">&nbsp;</label>
+                                <select class="form-control">
+                                    <option>Year</option>
+                                </select>
+                            </div>
+                            <div class="col-xs-12 col-md-6 form-group">
+                                <label for="inputSecurityCode">Security Code</label>
+                                <input type="ccnumber" class="form-control" id="inputSecurityCode" placeholder="Security Code">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-6 form-group">
+                                <label for="lastBilledDate">ZoomSafer Service Last Billed</label>
+                                <input type="text" class="form-control" id="lastBilledDate" placeholder="">
+                            </div>
+                            <div class="col-xs-6 form-group">
+                                <label for="validUntilDate">ZoomSafer Service Paid Until</label>
+                                <input type="text" class="form-control" id="validUntilDate" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button type="button" id="delete-account" class="btn btn-link">Delete Account</button>
+                        </div>
+                        <!-- <div class="row">
+                            <div class="col-xs-6 form-group">
+                                <input type="date" class="form-control" id="lastBilledDate" placeholder="">
+                            </div>
+                        </div> -->
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-md-6 col-md-offset-3">
+                <button type="button" id="save" class="btn btn-primary">Save Changes</button>
+                <button type="button" id="cancel" class="btn btn-primary">Revert</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <div class="col-xs-12 col-md-6 col-md-offset-3 container-fluid">
+            <p class="text-muted">&#169; Copyright 2014 Aegis Mobility</p>
+        </div>
+    </div>
+    
+    <!-- End -->
+    <script src="/js/jquery-1.11.0.min.js"></script>
+    <script src="/js/bootstrap.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $('#toggling-form')
+        .find('button[data-toggle]')
+            .on('click', function(){
+               var $target = $($(this).attr('data-toggle'));
+               
+               $target.toggle();
+               if (!$target.is(':visible')) {
+                   $('#toggling-form').disableSubmitButtons(false)
+               } 
+            });
+    });
+    </script>
+</body>
+</html>

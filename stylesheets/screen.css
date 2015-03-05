@@ -500,8 +500,8 @@ aside {
 /* line 71, ../sass/_jcurranstyle.scss */
 .content {
   float: left;
-  width: 62.5%;
-  padding: 15px;
+  width: 60%;
+  padding: 15px 30px;
   background-color: #fff;
 }
 /* line 76, ../sass/_jcurranstyle.scss */
@@ -509,43 +509,44 @@ aside {
   border-bottom: 2px solid #ff8000;
 }
 
-/* line 83, ../sass/_jcurranstyle.scss */
+/* line 80, ../sass/_jcurranstyle.scss */
 .content-sub {
   padding: 0 15px;
   float: left;
 }
 
-/* line 87, ../sass/_jcurranstyle.scss */
+/* line 84, ../sass/_jcurranstyle.scss */
 .site-title {
   margin-top: .75em;
 }
 
-/* line 90, ../sass/_jcurranstyle.scss */
+/* line 87, ../sass/_jcurranstyle.scss */
 .content-title {
   margin-top: .25em;
+  margin-bottom: 1.25em;
   line-height: 1.05;
 }
 
-/* line 94, ../sass/_jcurranstyle.scss */
+/* line 92, ../sass/_jcurranstyle.scss */
 .page-menu {
   margin: 0 0 15px;
 }
 
-/* line 98, ../sass/_jcurranstyle.scss */
+/* line 95, ../sass/_jcurranstyle.scss */
 footer {
   background-color: #fff;
   float: left;
-  width: 62.5%;
+  width: 60%;
   clear: both;
   font-size: .75em;
-  padding: 15px;
+  padding: 15px 30px;
 }
-/* line 105, ../sass/_jcurranstyle.scss */
+/* line 102, ../sass/_jcurranstyle.scss */
 footer p {
   color: #aaa;
 }
 
-/* line 109, ../sass/_jcurranstyle.scss */
+/* line 106, ../sass/_jcurranstyle.scss */
 .whence, .copyright {
   padding: 15px 0;
   float: left;
@@ -553,51 +554,54 @@ footer p {
 }
 
 @media only screen and (max-width: 1085px) {
-  /* line 117, ../sass/_jcurranstyle.scss */
+  /* line 114, ../sass/_jcurranstyle.scss */
   body {
     font-size: 16px;
   }
 
-  /* line 120, ../sass/_jcurranstyle.scss */
+  /* line 117, ../sass/_jcurranstyle.scss */
   .wrap {
     margin: 0 auto;
   }
 
-  /* line 123, ../sass/_jcurranstyle.scss */
+  /* line 120, ../sass/_jcurranstyle.scss */
   .subwrap {
     background-color: #eee;
   }
 
-  /* line 126, ../sass/_jcurranstyle.scss */
+  /* line 123, ../sass/_jcurranstyle.scss */
   .primary-header, .content, .subpage-menu, aside {
     float: none;
     width: auto;
   }
 
-  /* line 130, ../sass/_jcurranstyle.scss */
+  /* line 127, ../sass/_jcurranstyle.scss */
   .primary-header {
     background-color: #fff;
   }
 
-  /* line 133, ../sass/_jcurranstyle.scss */
+  /* line 130, ../sass/_jcurranstyle.scss */
   .content {
+    width: 100%;
     background-color: #eee;
+    padding: 15px;
   }
 
-  /* line 140, ../sass/_jcurranstyle.scss */
+  /* line 139, ../sass/_jcurranstyle.scss */
   .content-title {
     padding: 0;
   }
 
-  /* line 143, ../sass/_jcurranstyle.scss */
+  /* line 142, ../sass/_jcurranstyle.scss */
   aside {
     margin: 0;
     padding: 0 15px;
   }
 
-  /* line 147, ../sass/_jcurranstyle.scss */
+  /* line 146, ../sass/_jcurranstyle.scss */
   footer {
     width: 100%;
+    padding: 15px;
   }
 }
 /* Text 
@@ -631,12 +635,17 @@ h1, h2, h3, h4 {
 }
 
 /* line 169, ../sass/_jcurranstyle.scss */
+h1 {
+  font-weight: 400;
+}
+
+/* line 173, ../sass/_jcurranstyle.scss */
 p {
   margin-bottom: 1em;
   color: #666;
 }
 
-/* line 173, ../sass/_jcurranstyle.scss */
+/* line 177, ../sass/_jcurranstyle.scss */
 .caption {
   font-size: .85em;
   line-height: 1.2;
@@ -645,14 +654,33 @@ p {
   margin-bottom: 1.5em;
 }
 
+/* line 185, ../sass/_jcurranstyle.scss */
+.details {
+  font-size: .8em;
+  border-top: 1px dotted #ddd;
+  margin-bottom: 1.5em;
+}
+/* line 189, ../sass/_jcurranstyle.scss */
+.details tr {
+  border-bottom: 1px dotted #ddd;
+}
+/* line 191, ../sass/_jcurranstyle.scss */
+.details tr th {
+  padding: 2px 0;
+  text-transform: lowercase;
+  font-variant: small-caps;
+  letter-spacing: 0.1em;
+  padding-right: 1.5em;
+}
+
 /* Lightbox */
-/* line 183, ../sass/_jcurranstyle.scss */
+/* line 203, ../sass/_jcurranstyle.scss */
 .lb-data .lb-caption {
   color: #ff9000;
   font-weight: 400;
 }
 
-/* line 187, ../sass/_jcurranstyle.scss */
+/* line 207, ../sass/_jcurranstyle.scss */
 .lb-data .lb-number {
   color: #ddd;
 }
