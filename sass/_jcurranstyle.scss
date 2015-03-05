@@ -1,5 +1,14 @@
+/* */
+/* My customization */
+/* */
+
+@mixin sc {
+  text-transform: lowercase;
+  font-variant: small-caps;
+  letter-spacing: 0.1em;
+}
 html {
-  background-color: #eee;
+  background-color: #fff;
 }
 body {
   font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
@@ -10,29 +19,28 @@ body {
 
 /* Layout 
 ================================ */
-
 .wrap {
   margin: 0;
   max-width: 100%;
   width: 100%;
-  background-color: #eee;
+  background-color: #fff;
 }
 .subwrap {
   margin: 0 auto;
   max-width: 1200px;
   overflow: hidden;
   width: 100%;
-  background-color: #eee;
+  background-color: #fff;
 }
 .primary-header, aside {
   float: right;
   clear: right;
   width: 30%;
   padding: 15px;
-  background-color: #eee;
+  background-color: #fff;
 }
 aside {
-  background-color: #eee;
+  background-color: #fff;
   font-size: .85em;
 }
 .subpage-menu {
@@ -46,33 +54,17 @@ aside {
     a {
       color: #ff8000;
       &.back { }
-      &:visited { color: #222; }
-      &:hover { color: #ff8000; }
+      &:visited { color: #ff8000; }
+      &:hover { color: #222; }
       &:active { color: #222; }
     }
   }
 }
-//.subpage-feature {
-//  display: block;
-//  background-color: #eee;
-//  clear: right;
-//  padding: 0 15px;
-//}
-//.subpage-content {
-//  display: block;
-//  background-color: #eee;
-//  clear: right;
-//  padding: 15px;
-//  width: 62.5%;
-//  img {
-//    border-bottom: 1px solid #ff8000;
-//  }
-//}
 .content {
   float: left;
   width: 60%;
   padding: 15px 30px;
-  background-color: #fff;
+  background-color: #eee;
   img {
     border-bottom: 2px solid #ff8000;
   }
@@ -93,12 +85,12 @@ aside {
   margin: 0 0 15px;
 }
 footer {
-  background-color: #fff;
+  background-color: #eee;
   float: left;
   width: 60%;
   clear: both;
-  font-size: .75em;
   padding: 15px 30px;
+//  border-bottom: 2px solid #ccc;
   p {
     color: #aaa;
   }
@@ -107,10 +99,22 @@ footer {
   padding: 15px 0;
   float: left;
   clear: left;
+  font-size: .8em;
+}
+.copyright {
+  color: #aaa;
+  font-size: .7em;
+}
+header {
+  position: fixed;
+  right: 0;
 }
 
 // smaller
 @media only screen and (max-width: 1085px) {
+  header {
+    position: relative;
+  }
   body {
     font-size: 16px;
   }
@@ -128,18 +132,15 @@ footer {
     background-color: #fff;
   }
   .content {
-    width: 100%;
+    width: auto;
     background-color: #eee;
     padding: 15px;
   }
-//  .subpage-content {
-//    width: auto;
-//    padding: 15px;
-//  }
   .content-title {
     padding: 0;
   }
   aside {
+    width: auto;
     margin: 0;
     padding: 0 15px;
   }
@@ -153,14 +154,13 @@ footer {
 ================================ */
 
 a {
-  color: #ff8000;
+  color: #222;
   &.back { }
-  &:visited { color: #ff8000; }
-  &:hover { color: #222; }
+  &:visited { color: #222; }
+  &:hover { color: #ff8000; }
   &:active { color: #ff8000; }
-  &.is-current-page { color: #222; }
+  &.is-current-page { color: #ff8000; }
 }
-
 h1, h2, h3, h4 {
   margin-top: 1.5em;
   margin-bottom: .75em;
@@ -168,8 +168,8 @@ h1, h2, h3, h4 {
 }
 h1 {
   font-weight: 400;
+//  color: #ff8000;
 }
-
 p {
   margin-bottom: 1em;
   color: #666;
@@ -182,24 +182,31 @@ p {
   margin-bottom: 1.5em;
 }
 
+/* Table */
 .details {
-  font-size: .8em;
+  font-size: .75em;
   border-top: 1px dotted #ddd;
   margin-bottom: 1.5em;
   tr {
     border-bottom: 1px dotted #ddd;
     th {
-      padding: 2px 0;
-      text-transform: lowercase;
-      font-variant: small-caps;
-      letter-spacing: 0.1em;
+      padding: .2em 0;
       padding-right: 1.5em;
+      vertical-align: bottom;
+      line-height: 1.25;
+      @include sc;
+    }
+    td {
+      padding: .2em 0;
+      line-height: 1.25;
+    }
+    span {
+      @include sc;
     }
   }
 }
 
 /* Lightbox */
-
 .lb-data .lb-caption {
   color: #ff9000;
   font-weight: 400;
@@ -207,8 +214,6 @@ p {
 .lb-data .lb-number {
   color: #ddd;
 }
-
-
 
 
 /* I got 99 problems, but this last line ain't one */

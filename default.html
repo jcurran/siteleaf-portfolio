@@ -15,7 +15,7 @@
         <link rel="apple-touch-icon-precomposed" href="/img/touch/apple-touch-icon-57x57-precomposed.png">
         <link rel="shortcut icon" sizes="196x196" href="/img/touch/touch-icon-196x196.png">
         <link rel="shortcut icon" href="/img/touch/apple-touch-icon.png">
-        <link rel="icon" type="image/x-icon" href="favicon.ico" />  
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />  
 
         <link rel="canonical" href="{{permalink}}" />
         <link rel="alternate" type="application/rss+xml" href="{{site.feed_url}}" />
@@ -57,10 +57,6 @@
         
                 <section class="content">
                     <h1 class="content-title">{{title}}</h1>
-                    {{body}}
-                </section>
-                
-                <aside>
                     <!-- if PAGES -->
                     {% if pages %}
                         {% comment %} Show subpage menu if available {% endcomment %}
@@ -70,7 +66,10 @@
                         {% endfor %}
                             </ul>
                     {% endif %}
-                </aside>
+                    {{body}}
+                </section>
+                
+                <aside></aside>
                 
                 <footer>
                     <!-- if PARENT -->
