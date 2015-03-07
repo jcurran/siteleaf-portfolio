@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<head>
+    <title>ZoomSafer Control Center</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/stylesheets/zcc-styles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="navbar-icon"><a class="navbar-brand" href="zcc-index.html">ZoomSafer Control Center</a></div>
+        </div>    
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/projects/zoomsafer-configuration-portal">Log Out</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 col-md-6 col-md-offset-3">
+                <ul class="nav nav-tabs">
+                    <li><a href="zcc-index.html">Account</a></li>
+                    <li class="active"><a href="#">Settings</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-md-6 col-md-offset-3">
+                <h3>One-Touch Dialing</h3>
+                <p>Up to four numbers to display as quick-dial buttons on the driving screen.</p>
+                <form>
+                    <div class="form-group">
+                        <label for="inputPhoneNumber1">One-Touch Number</label>
+                        <input type="phonenumber" class="form-control" id="inputPhoneNumber1" placeholder="Phone number">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPhoneNumber2">One-Touch Number</label>
+                        <input type="phonenumber" class="form-control" id="inputPhoneNumber2" placeholder="Phone number">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPhoneNumber3">One-Touch Number</label>
+                        <input type="phonenumber" class="form-control" id="inputPhoneNumber3" placeholder="Phone number">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPhoneNumber4">One-Touch Number</label>
+                        <input type="phonenumber" class="form-control" id="inputPhoneNumber4" placeholder="Phone number">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-md-6 col-md-offset-3">
+                <h3>Auto-Reply Messages</h3>
+                <p>Text message (SMS) reply to send when you receive an incoming text or call.</p>
+                <form>
+                    <div class="form-group">
+                        <label for="inputReplyToText">SMS Reply to Incoming Text</label>
+                        <textarea id="inputReplyToText" class="form-control" rows="2" placeholder="Maximum 140 characters"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputReplyToCall">SMS Reply to Incoming Call</label>
+                        <textarea id="inputReplyToCall" class="form-control" rows="2" placeholder="Maximum 140 characters"></textarea>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-md-6 col-md-offset-3">
+                <h3>Notifications</h3>
+                <p>When to send notification emails and who to send them to.</p>
+                <form>
+                    <div class="form-group">
+                        <label for="inputNotificationEmail">Notification Email</label>
+                        <input type="email" class="form-control" id="inputNotificationEmail" placeholder="Email">
+                    </div>
+                        <label class="control-label">Send a Notification Email When</label>
+                    <div class="form-group">
+                        <label class="checkbox-inline">
+                            <input type="checkbox" value="passenger"> Passenger button pressed
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label class="checkbox-inline">
+                            <input type="checkbox" value="inactivity"> App uninstalled
+                        </label>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-md-6 col-md-offset-3">
+                <button type="button" id="save" class="btn btn-primary">Save Changes</button>
+                <button type="button" id="cancel" class="btn btn-primary">Revert</button>
+            </div>
+        </div>        
+    </div>
+    
+    <div class="footer">
+        <div class="col-xs-12 col-md-6 col-md-offset-3 container-fluid">
+            <p class="text-muted">&#169; Copyright 2014 Aegis Mobility</p>
+        </div>
+    </div>
+    
+    <!-- End -->
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="javascripts/bootstrap.js"></script>
+</body>
+</html>
