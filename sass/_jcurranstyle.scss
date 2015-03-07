@@ -1,0 +1,219 @@
+/* */
+/* My customization */
+/* */
+
+@mixin sc {
+  text-transform: lowercase;
+  font-variant: small-caps;
+  letter-spacing: 0.1em;
+}
+html {
+  background-color: #fff;
+}
+body {
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+  font-size: 22px;
+  line-height: 1.5;
+  color: #444;  
+}
+
+/* Layout 
+================================ */
+.wrap {
+  margin: 0;
+  max-width: 100%;
+  width: 100%;
+  background-color: #fff;
+}
+.subwrap {
+  margin: 0 auto;
+  max-width: 1200px;
+  overflow: hidden;
+  width: 100%;
+  background-color: #fff;
+}
+.primary-header, aside {
+  float: right;
+  clear: right;
+  width: 30%;
+  padding: 15px;
+  background-color: #fff;
+}
+aside {
+  background-color: #fff;
+  font-size: .85em;
+}
+.subpage-menu {
+  margin: 0 0 15px;
+  font-size: .8em;
+  li {
+    border-top: 1px dotted #d4d7d9;
+    margin: 0.5em 0 0;
+    padding: 0.5em 0 0;
+    list-style: none;
+    a {
+      color: #ff8000;
+      &.back { }
+      &:visited { color: #ff8000; }
+      &:hover { color: #222; }
+      &:active { color: #222; }
+    }
+  }
+}
+.content {
+  float: left;
+  width: 60%;
+  padding: 15px 30px;
+  background-color: #eee;
+  img {
+    border-bottom: 2px solid #ff8000;
+  }
+}
+.content-sub {
+  padding: 0 15px;
+  float: left;
+}
+.site-title {
+  margin-top: .75em;
+}
+.content-title {
+  margin-top: .25em;
+  margin-bottom: 1.25em;
+  line-height: 1.05;
+}
+.page-menu {
+  margin: 0 0 15px;
+}
+footer {
+  background-color: #eee;
+  float: left;
+  width: 60%;
+  clear: both;
+  padding: 15px 30px;
+//  border-bottom: 2px solid #ccc;
+  p {
+    color: #aaa;
+  }
+}
+.whence, .copyright {
+  padding: 15px 0;
+  float: left;
+  clear: left;
+  font-size: .8em;
+}
+.copyright {
+  color: #aaa;
+  font-size: .7em;
+}
+header {
+  position: fixed;
+  right: 0;
+}
+
+// smaller
+@media only screen and (max-width: 1085px) {
+  header {
+    position: relative;
+  }
+  body {
+    font-size: 16px;
+  }
+  .wrap {
+    margin: 0 auto;
+  }
+  .subwrap {
+    background-color: #eee;
+  }
+  .primary-header, .content, .subpage-menu, aside {
+    float: none;
+    width: auto;
+  }
+  .primary-header {
+    background-color: #fff;
+  }
+  .content {
+    width: auto;
+    background-color: #eee;
+    padding: 15px;
+  }
+  .content-title {
+    padding: 0;
+  }
+  aside {
+    width: auto;
+    margin: 0;
+    padding: 0 15px;
+  }
+  footer {
+    width: 100%;
+    padding: 15px;
+  }
+}
+
+/* Text 
+================================ */
+
+a {
+  color: #222;
+  &.back { }
+  &:visited { color: #222; }
+  &:hover { color: #ff8000; }
+  &:active { color: #ff8000; }
+  &.is-current-page { color: #ff8000; }
+}
+h1, h2, h3, h4 {
+  margin-top: 1.5em;
+  margin-bottom: .75em;
+  font-weight: 600;
+}
+h1 {
+  font-weight: 400;
+//  color: #ff8000;
+}
+p {
+  margin-bottom: 1em;
+  color: #666;
+}
+.caption {
+  font-size: .85em;
+  line-height: 1.2;
+  max-width: 67%;
+  color: #ff8000;
+  margin-bottom: 1.5em;
+}
+
+/* Table */
+.details {
+  font-size: .75em;
+  border-top: 1px dotted #ddd;
+  margin-bottom: 1.5em;
+  tr {
+    border-bottom: 1px dotted #ddd;
+    th {
+      padding: .2em 0;
+      padding-right: 1.5em;
+      vertical-align: bottom;
+      line-height: 1.25;
+      @include sc;
+    }
+    td {
+      padding: .2em 0;
+      line-height: 1.25;
+    }
+    span {
+      @include sc;
+    }
+  }
+}
+
+/* Lightbox */
+.lb-data .lb-caption {
+  color: #ff9000;
+  font-weight: 400;
+}
+.lb-data .lb-number {
+  color: #ddd;
+}
+
+
+/* I got 99 problems, but this last line ain't one */

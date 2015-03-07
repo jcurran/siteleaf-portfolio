@@ -5,11 +5,7 @@
 
 @import "compass/reset";
 @import "compass/utilities";
-@import "partials/lightbox";
-@import "partials/defaultstyle";
-@import "partials/buttons";
-.button {
-  @include button;
-  @include color(#888888);
-}
-@import "partials/jcurranstyle";
+@import "compass/layout/sticky-footer";
+@import "lightbox";
+@import "defaultstyle";
+@import "jcurranstyle";
