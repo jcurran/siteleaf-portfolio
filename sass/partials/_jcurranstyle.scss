@@ -1,6 +1,15 @@
 /* */
-/* My customization */
+/* jcurran-design customization */
 /* */
+
+$primary: #ff8100;
+$contrast: #0F2686;
+
+$brightest: #fff;
+$dull: #eee;
+$subtle: #bbb;
+$bodytext: #444;
+$darkest: #222;
 
 @mixin sc {
   text-transform: lowercase;
@@ -8,13 +17,44 @@
   letter-spacing: 0.1em;
 }
 html {
-  background-color: #fff;
+  background-color: $brightest;
 }
 body {
   font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
   font-size: 22px;
   line-height: 1.5;
-  color: #444;  
+  color: $bodytext;  
+}
+
+/* Text 
+================================ */
+
+a {
+  color: $contrast; 
+  &:visited { color: $contrast; }
+  &:hover { 
+    color: $contrast; 
+    text-decoration: underline;
+    &.back { 
+      color: $brightest; 
+    }
+  } 
+  &:active { color: $contrast; }
+  &.is-current-page { color: $primary; } 
+  &.back { color: $dull; }
+}
+h1, h2, h3, h4 {
+  margin-top: 1.5em;
+  margin-bottom: .75em;
+  font-weight: 600;
+}
+h1 {
+  font-weight: 400;
+  color: $primary;
+}
+p {
+  margin-bottom: 1em;
+  color: $bodytext;
 }
 
 /* Layout 
@@ -23,41 +63,43 @@ body {
   margin: 0;
   max-width: 100%;
   width: 100%;
-  background-color: #fff;
+  background-color: $brightest;
 }
 .subwrap {
   margin: 0 auto;
   max-width: 1200px;
   overflow: hidden;
   width: 100%;
-  background-color: #fff;
+  background-color: $brightest;
 }
 .primary-header, aside {
   float: right;
   clear: right;
   width: 30%;
   padding: 15px;
-  background-color: #fff;
+  background-color: $brightest;
 }
 aside {
-  background-color: #fff;
+  background-color: $brightest;
   font-size: .85em;
 }
 .subpage-menu {
-  margin: 2em 0 15px;
+  margin: 0 0 15px;
   font-size: .8em;
   li {
+    display: inline-block;
 //    border-top: 1px dotted #d4d7d9;
-display: inline-block;
     margin: 0.5em 0 0;
     padding: 0.5em 0 0;
     list-style: none;
     a {
-      color: #ff8000;
-      &.back { }
-      &:visited { color: #ff8000; }
-      &:hover { color: #222; }
-      &:active { color: #222; }
+      color: $primary;
+      &:visited { color: $primary; }
+      &:hover { 
+        color: $bodytext;       
+        text-decoration: none;
+      } 
+      &:active { color: $darkest; }
     }
   }
 }
@@ -65,9 +107,9 @@ display: inline-block;
   float: left;
   width: 60%;
   padding: 15px 30px;
-  background-color: #f6f6f6;
+  background-color: $dull;
   img {
-    border-bottom: 2px solid #ff8000;
+    border-bottom: 2px solid $primary;
   }
 }
 .content-sub {
@@ -79,10 +121,11 @@ display: inline-block;
   font-weight: 400;
   font-size: 1.15em;
   a {
-    color: #ff8000;
-    &:visited { color: #ff8000; }
-    &:hover { color: #ff8000; }
-    &:active { color: #ff8000; }
+    color: $bodytext; 
+    text-decoration: none;
+    &:visited { color: $bodytext; }
+    &:hover { color: $primary; } 
+    &:active { color: $primary; }
   }
 }
 .content-title {
@@ -92,16 +135,25 @@ display: inline-block;
 }
 .page-menu {
   margin: 0 0 15px;
+  a {
+    color: $bodytext;  
+    &:visited { color: $bodytext; }
+    &:hover { 
+      color: $primary;
+      text-decoration: none; 
+    } 
+    &:active { color: $primary; }
+    &.is-current-page { color: $primary; }
+  }
 }
 footer {
-  background-color: #999;
+  background-color: $primary;
   float: left;
   width: 60%;
   clear: both;
   padding: 15px 30px;
-//  border-bottom: 2px solid #ccc;
   p {
-    color: #aaa;
+    color: $dull;
   }
 }
 .whence, .copyright {
@@ -111,12 +163,33 @@ footer {
   font-size: .8em;
 }
 .copyright {
-  color: #eee;
+  color: $subtle;
   font-size: .7em;
 }
 header {
   position: fixed;
   right: 0;
+}
+.caption {
+  font-size: .85em;
+  line-height: 1.2;
+  max-width: 320px;
+  color: $primary;
+  margin-bottom: 1.5em;
+}
+.tap {
+  font-size: .75em;
+  line-height: 1.25;
+  color: $subtle;
+}
+.thumb {
+  img {
+    height: 144px;
+    max-height: 144px;
+  }
+}
+.zcc-button {
+  margin: 30px 0 15px;
 }
 
 // smaller
@@ -131,18 +204,19 @@ header {
     margin: 0 auto;
   }
   .subwrap, section {
-    background-color: #eee;
+    background-color: $dull;
   }
   .primary-header, .content, .subpage-menu, aside {
     float: none;
     width: auto;
   }
   .primary-header {
-    background-color: #fff;
+    background-color: $brightest;
   }
   .content {
     width: auto;
     padding: 15px;
+    background-color: $dull;
   }
   .content-title {
     padding: 0;
@@ -158,58 +232,13 @@ header {
   }
 }
 
-/* Text 
-================================ */
-
-a {
-  color: #222;
-  &.back { }
-  &:visited { color: #222; }
-  &:hover { color: #ff8000; }
-  &:active { color: #ff8000; }
-  &.is-current-page { color: #ff8000; }
-}
-h1, h2, h3, h4 {
-  margin-top: 1.5em;
-  margin-bottom: .75em;
-  font-weight: 600;
-}
-h1 {
-  font-weight: 400;
-}
-p {
-  margin-bottom: 1em;
-  color: #666;
-}
-.caption {
-  font-size: .85em;
-  line-height: 1.2;
-  max-width: 320px;
-  color: #ff8000;
-  margin-bottom: 1.5em;
-}
-.tap {
-  font-size: .75em;
-  color: #666;
-}
-
-.thumb {
-  img {
-    height: 144px;
-    max-height: 144px;
-  }
-}
-.zcc-button {
-  margin: 30px 0 15px;
-}
-
 /* Table */
 .details {
   font-size: .75em;
-  border-top: 1px dotted #ddd;
+  border-top: 1px dotted $dull;
   margin-bottom: 2em;
   tr {
-    border-bottom: 1px dotted #ddd;
+    border-bottom: 1px dotted $dull;
     th {
       padding: .2em 0;
       padding-right: 1.5em;
@@ -229,12 +258,14 @@ p {
 
 /* Lightbox */
 .lb-data .lb-caption {
-  color: #ff9000;
+  color: $primary;
   font-weight: 400;
 }
 .lb-data .lb-number {
-  color: #ddd;
+  color: $dull;
 }
 
 
-/* I got 99 problems, but this last line ain't one */
+
+
+/* I got 99 problems, but this last line of jcurran-design ain't one */

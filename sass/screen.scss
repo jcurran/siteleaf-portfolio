@@ -5,7 +5,6 @@
 
 @import "compass/reset";
 @import "compass/utilities";
-@import "compass/layout/sticky-footer";
-@import "lightbox";
-@import "defaultstyle";
-@import "jcurranstyle";
+@import "partials/lightbox";
+@import "partials/defaultstyle";
+@import "partials/jcurranstyle";
