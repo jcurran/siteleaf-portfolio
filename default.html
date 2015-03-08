@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>{{site.title}} | {{title}}</title>
-        <meta name="description" content="xxxx">
+        <meta name="description" content="User Interface (UI) and Interaction Designer Jim Curran Vancouver">
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
         <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
@@ -15,10 +15,10 @@
         <link rel="apple-touch-icon-precomposed" href="/images/touch/apple-touch-icon-57x57-precomposed.png">
         <link rel="shortcut icon" sizes="196x196" href="/images/touch/touch-icon-196x196.png">
         <link rel="shortcut icon" href="/images/touch/apple-touch-icon.png">
-        <link rel="icon" type="image/x-icon" href="/favicon.ico" />  
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" /> 
 
         <link rel="canonical" href="{{permalink}}" />
-        <link rel="alternate" type="application/rss+xml" href="{{site.feed_url}}" />
+        <link rel="alternate" href="{{site.feed_url}}" type="application/rss+xml" />
 
         <!-- Tile icon for Win8 (144x144 + tile color) -->
         <meta name="msapplication-TileImage" content="/images/touch/apple-touch-icon-144x144-precomposed.png">
@@ -31,57 +31,67 @@
 
         <!-- This script prevents links from opening in Mobile Safari. https://gist.github.com/1042026 -->
         <!--
-        <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
+        <script>
+        (function(a, b, c) {
+          if (c in b && b[c]) {
+            var d, e = a.location,
+              f = /^(a|html)$/i;
+            a.addEventListener("click", function(a) {
+              d = a.target;
+              while (!f.test(d.nodeName)) d = d.parentNode;
+              "href" in d && (d.href.indexOf("http") || ~d.href.indexOf(e.host)) && (a.preventDefault(),
+                e.href = d.href)
+            }, !1)
+          }
+        })(document, window.navigator, "standalone")
+        </script>
         -->
 
-        <link rel="stylesheet" href="/stylesheets/normalize.css">
-        <link rel="stylesheet" href="/stylesheets/main.css">
-        <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,900' rel='stylesheet' type='text/css' />
-        <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css" media="screen, projection" />
+        <link rel="stylesheet" href="/stylesheets/normalize.css" type="text/css">
+        <link rel="stylesheet" href="/stylesheets/main.css" type="text/css">
+        <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,900' type='text/css' />
+        <link rel="stylesheet" href="/stylesheets/screen.css" type="text/css" media="screen, projection" />
         <script src="/javascripts/vendor/modernizr-2.7.1.min.js"></script>
     </head>
     <body>
         <div class="wrap">
-            <div class="subwrap">
-
-                <header class="primary-header">
-                    <h1 class="site-title"><a href="/">{{site.title}}</a></h1>
-                    <nav>
-                        <ul class="page-menu">
-                            {% for page in site.pages %}
-                                <li><a href="{{page.url}}"{% if page.url == url %} class="is-current-page"{% endif %}>{{page.title}}</a></li>
-                            {% endfor %}
-                        </ul>
-                    </nav>
-                </header>
-        
-                <section class="content">
-                    <h1 class="content-title">{{title}}</h1>
-                    <!-- if PAGES -->
-                    {% if pages %}
-                        {% comment %} Show subpage menu if available {% endcomment %}
-                            <ul class="subpage-menu">
-                        {% for subpage in pages %}
-                                <li><a href="{{subpage.url}}">{{subpage.title}}</a></li>
-                        {% endfor %}
-                            </ul>
-                    {% endif %}
-                    {{body}}
-                </section>
-                
-                <aside></aside>
-                
-                <footer>
-                    <!-- if PARENT -->
-                    {% if parent %}
-                        <div class="whence"><a href="{{parent.url}}" class="back">&larr; Back to {{parent.title}}</a></div>
-                    {% else %}
-                        <div class="whence"><a href="{{current.url}}" class="back">&larr; Top</a></div>
-                    {% endif %}
-                        <div class="copyright">&copy; 2015 Jim Curran</div>
-                </footer>
+            <header class="primary-header">
+                <h1 class="site-title"><a href="/">{{site.title}}</a></h1>
+                <nav>
+                    <ul class="page-menu">
+                    {% for page in site.pages %}
+                        <li><a href="{{page.url}}"{% if page.url == url %} class="is-current-page"{% endif %}>{{page.title}}</a></li>
+                    {% endfor %}
+                    </ul>
+                </nav>
+            </header>
+            <section class="content">
+                <h1 class="content-title">{{title}}</h1>
+                <!-- if PAGES -->
+                {% if pages %}
+                    <ul class="subpage-menu">
+                    {% for subpage in pages %}
+                        <li><a href="{{subpage.url}}">{{subpage.title}}</a></li>
+                    {% endfor %}
+                    </ul>
+                {% endif %}
+                <!-- BODY -->
+                {{body}}
+            </section>
+            <aside></aside>
+            <div class="wrap-footer"></div><!-- sticky footer -->
+        </div><!-- /wrap -->        
+        <footer>
+            <div class="wrap">
+                <!-- if PARENT -->
+                {% if parent %}
+                    <div class="whence"><a href="{{parent.url}}" class="back">&larr; Back to {{parent.title}}</a></div>
+                {% else %}
+                    <div class="whence"><a href="{{current.url}}" class="back">&larr; Top</a></div>
+                {% endif %}
+                    <div class="copyright">&copy; 2015 Jim Curran</div>
             </div>
-        </div><!-- /wrap -->
+        </footer>
 
         <!-- jQuery + JS -->
         <script src="/javascripts/jquery-1.11.0.min.js"></script>

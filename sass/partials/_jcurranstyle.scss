@@ -2,20 +2,29 @@
 /* jcurran-design customization */
 /* */
 
-$primary: #ff8100;
-$contrast: #0F2686;
+$susy:(
+  columns: 12,
+//  debug: (image: show),
+  global-box-sizing: border-box
+);
 
-$brightest: #fff;
-$dull: #eee;
-$subtle: #bbb;
-$bodytext: #444;
-$darkest: #222;
+$primary: rgba(255,129,0,.9); //#ff8100;
+$contrast: rgba(15,38,134,.9); //#0F2686;
+
+$brightest: rgba(255,255,255,.9); //#fff;
+$dull: rgba(238,238,238,.9); //#eee;
+$subtle: rgba(187,187,187,.9); //#bbb;
+$bodytext: rgba(68,68,68,.9); //#444;
+$darkest: rgba(34,34,34,.9); //#222;
+
+@include border-box-sizing;
 
 @mixin sc {
   text-transform: lowercase;
   font-variant: small-caps;
   letter-spacing: 0.1em;
 }
+
 html {
   background-color: $brightest;
 }
@@ -28,29 +37,26 @@ body {
 
 /* Text 
 ================================ */
-
 a {
   color: $contrast; 
   &:visited { color: $contrast; }
   &:hover { 
     color: $contrast; 
     text-decoration: underline;
-    &.back { 
-      color: $brightest; 
-    }
+    &.back { color: $brightest; }
   } 
   &:active { color: $contrast; }
   &.is-current-page { color: $primary; } 
   &.back { color: $dull; }
 }
 h1, h2, h3, h4 {
-  margin-top: 1.5em;
-  margin-bottom: .75em;
   font-weight: 600;
 }
 h1 {
   font-weight: 400;
+  font-size: 2em;
   color: $primary;
+  margin-bottom: 1em;
 }
 p {
   margin-bottom: 1em;
@@ -59,65 +65,23 @@ p {
 
 /* Layout 
 ================================ */
+header { // sidebar
+  @include span(4 of 12 last);
+  h1 {
+    margin-bottom: 0;
+  }
+}
+aside { background-color: blue; height: 100%; min-height: 100%; }
 .wrap {
-  margin: 0;
-  max-width: 100%;
-  width: 100%;
   background-color: $brightest;
+  @include container (1200px);
 }
-.subwrap {
-  margin: 0 auto;
-  max-width: 1200px;
-  overflow: hidden;
-  width: 100%;
+.primary-header {
   background-color: $brightest;
-}
-.primary-header, aside {
-  float: right;
-  clear: right;
-  width: 30%;
-  padding: 15px;
-  background-color: $brightest;
-}
-aside {
-  background-color: $brightest;
-  font-size: .85em;
-}
-.subpage-menu {
-  margin: 0 0 15px;
-  font-size: .8em;
-  li {
-    display: inline-block;
-//    border-top: 1px dotted #d4d7d9;
-    margin: 0.5em 0 0;
-    padding: 0.5em 0 0;
-    list-style: none;
-    a {
-      color: $primary;
-      &:visited { color: $primary; }
-      &:hover { 
-        color: $bodytext;       
-        text-decoration: none;
-      } 
-      &:active { color: $darkest; }
-    }
-  }
-}
-.content {
-  float: left;
-  width: 60%;
-  padding: 15px 30px;
-  background-color: $dull;
-  img {
-    border-bottom: 2px solid $primary;
-  }
-}
-.content-sub {
-  padding: 0 15px;
-  float: left;
 }
 .site-title {
-  margin-top: .25em;
+  padding: 15px 15px 0 15px;
+//  margin-top: .25em;
   font-weight: 400;
   font-size: 1.15em;
   a {
@@ -128,58 +92,81 @@ aside {
     &:active { color: $primary; }
   }
 }
-.content-title {
-  margin-top: .25em;
-  margin-bottom: 1.25em;
-  line-height: 1.05;
+nav {
+  padding: 15px;
+  li a {
+    text-decoration: none;
+  }
 }
 .page-menu {
-  margin: 0 0 15px;
+  font-size: .9em;
   a {
     color: $bodytext;  
-    &:visited { color: $bodytext; }
     &:hover { 
-      color: $primary;
       text-decoration: none; 
+      color: $primary;
     } 
+    &:visited { color: $bodytext; }
     &:active { color: $primary; }
     &.is-current-page { color: $primary; }
   }
 }
+.subpage-menu {
+  font-size: .8em;
+  li {
+//    display: inline-block;
+    margin: 0.5em 0 0;
+    padding: 0.5em 0 0;
+    border-top: 1px dotted #d4d7d9;
+    list-style: none;
+    a {
+      color: $primary;
+      text-decoration: none;
+      &:hover { 
+        color: $bodytext;       
+        text-decoration: underline;
+      } 
+      &:visited { color: $primary; }
+      &:active { color: $darkest; }
+    }
+  }
+}
+.content {  // content
+  @include span(8 of 12);
+  padding: 15px;
+  background-color: $dull;
+  img {
+    border-bottom: 2px solid $primary;
+  }
+}
 footer {
-  background-color: $primary;
-  float: left;
-  width: 60%;
-  clear: both;
-  padding: 15px 30px;
+  @include container(1200px);
   p {
     color: $dull;
   }
-}
-.whence, .copyright {
-  padding: 15px 0;
-  float: left;
-  clear: left;
-  font-size: .8em;
-}
-.copyright {
-  color: $subtle;
-  font-size: .7em;
-}
-header {
-  position: fixed;
-  right: 0;
+  .whence, .copyright {
+    padding: 15px;
+    font-size: .8em;
+  }
+  .copyright {
+    color: $subtle;
+    font-size: .7em;
+    padding-bottom: 0;
+  }
+  .wrap {
+    background-color: $primary;
+    @include span(8 of 12);
+  }
 }
 .caption {
   font-size: .85em;
-  line-height: 1.2;
-  max-width: 320px;
+//  line-height: 1.2;
   color: $primary;
-  margin-bottom: 1.5em;
+//  margin-bottom: 1.5em;
 }
 .tap {
   font-size: .75em;
-  line-height: 1.25;
+//  line-height: 1.25;
   color: $subtle;
 }
 .thumb {
@@ -192,43 +179,23 @@ header {
   margin: 30px 0 15px;
 }
 
-// smaller
-@media only screen and (max-width: 1085px) {
-  header {
-    position: relative;
-  }
+/* */
+@media screen and (min-width: 787px) and (max-width: 1140px) {
   body {
-    font-size: 16px;
+    font-size: 1.2em;
   }
-  .wrap {
-    margin: 0 auto;
+}
+
+/* */
+@media screen and (max-width: 786px) {
+  body {
+    font-size: 1em;
   }
-  .subwrap, section {
-    background-color: $dull;
+  header, .content { // sidebar
+    @include span(12 of 12 last);
   }
-  .primary-header, .content, .subpage-menu, aside {
-    float: none;
-    width: auto;
-  }
-  .primary-header {
-    background-color: $brightest;
-  }
-  .content {
-    width: auto;
-    padding: 15px;
-    background-color: $dull;
-  }
-  .content-title {
-    padding: 0;
-  }
-  aside {
-    width: auto;
-    margin: 0;
-    padding: 0 15px;
-  }
-  footer {
-    width: 100%;
-    padding: 15px;
+  footer .wrap { 
+    @include span(12 of 12 last);    
   }
 }
 
@@ -265,7 +232,6 @@ header {
   color: $dull;
 }
 
+@include sticky-footer(96px, ".wrap", ".subwrap", footer);
 
-
-
-/* I got 99 problems, but this last line of jcurran-design ain't one */
+///* I got 99 problems, but this last line of jcurran-design ain't one */
