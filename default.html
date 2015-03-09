@@ -66,8 +66,9 @@
                 </nav>
             </header>
             <section class="content">
-                <h1 class="content-title">{{title}}</h1>
-                <!-- if PAGES -->
+                <!-- BODY -->
+                {{body}}
+                <!-- SUBPAGE MENU -->
                 {% if pages %}
                     <ul class="subpage-menu">
                     {% for subpage in pages %}
@@ -75,8 +76,6 @@
                     {% endfor %}
                     </ul>
                 {% endif %}
-                <!-- BODY -->
-                {{body}}
             </section>
             <aside></aside>
             <div class="wrap-footer"></div><!-- sticky footer -->

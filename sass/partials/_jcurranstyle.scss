@@ -4,7 +4,6 @@
 
 $susy:(
   columns: 12,
-//  debug: (image: show),
   global-box-sizing: border-box
 );
 
@@ -47,16 +46,25 @@ a {
   } 
   &:active { color: $contrast; }
   &.is-current-page { color: $primary; } 
-  &.back { color: $dull; }
-}
-h1, h2, h3, h4 {
-  font-weight: 600;
+  &.back { 
+    color: $dull; 
+    text-decoration: none;
+    &:hover { 
+      text-decoration: underline;
+    }
+  }
 }
 h1 {
-  font-weight: 400;
   font-size: 2em;
   color: $primary;
   margin-bottom: 1em;
+}
+h2 {
+  font-weight: 600;
+  font-size: 1.25em;
+}
+h2, h3, h4 {
+  margin: .75em 0 .25em;
 }
 p {
   margin-bottom: 1em;
@@ -71,7 +79,9 @@ header { // sidebar
     margin-bottom: 0;
   }
 }
-aside { background-color: blue; height: 100%; min-height: 100%; }
+aside { 
+  @include span(12 of 12 last);
+}
 .wrap {
   background-color: $brightest;
   @include container (1200px);
@@ -80,33 +90,29 @@ aside { background-color: blue; height: 100%; min-height: 100%; }
   background-color: $brightest;
 }
 .site-title {
-  padding: 15px 15px 0 15px;
-//  margin-top: .25em;
-  font-weight: 400;
-  font-size: 1.15em;
-  a {
-    color: $bodytext; 
-    text-decoration: none;
-    &:visited { color: $bodytext; }
-    &:hover { color: $primary; } 
-    &:active { color: $primary; }
-  }
+  display: none;
 }
 nav {
   padding: 15px;
-  li a {
-    text-decoration: none;
-  }
+  li {
+    &:nth-child(1) {
+      font-size: 1.3em;
+      margin-bottom: .5em;
+    }
+    a {
+      text-decoration: none;
+    }
+  } 
 }
 .page-menu {
   font-size: .9em;
   a {
     color: $bodytext;  
+    &:visited { color: $bodytext; }
     &:hover { 
       text-decoration: none; 
       color: $primary;
     } 
-    &:visited { color: $bodytext; }
     &:active { color: $primary; }
     &.is-current-page { color: $primary; }
   }
@@ -114,20 +120,21 @@ nav {
 .subpage-menu {
   font-size: .8em;
   li {
-//    display: inline-block;
-    margin: 0.5em 0 0;
-    padding: 0.5em 0 0;
+    margin: 15px 0 0;
+    padding: 15px 0 0;
     border-top: 1px dotted #d4d7d9;
     list-style: none;
     a {
       color: $primary;
+      border-radius: 12px;
+      padding: 0 6px 0;
       text-decoration: none;
-      &:hover { 
-        color: $bodytext;       
-        text-decoration: underline;
-      } 
       &:visited { color: $primary; }
-      &:active { color: $darkest; }
+      &:hover { 
+        background-color: $primary;
+        color: $brightest;       
+      } 
+      &:active { }
     }
   }
 }
@@ -149,24 +156,30 @@ footer {
     font-size: .8em;
   }
   .copyright {
-    color: $subtle;
-    font-size: .7em;
-    padding-bottom: 0;
+    color: lighten(saturate($primary, 50%), 40%);
+    text-shadow: 0 -.5px 0 darken($primary, 20%);
+    font-size: .6em;
+    
   }
   .wrap {
     background-color: $primary;
     @include span(8 of 12);
   }
 }
+.featured {
+  background-color: silver;
+  border-bottom: 1px solid $dull;
+  height: 300px;
+}
 .caption {
   font-size: .85em;
-//  line-height: 1.2;
+  line-height: 1.25;
   color: $primary;
-//  margin-bottom: 1.5em;
+  margin-bottom: 1.5em;
 }
 .tap {
   font-size: .75em;
-//  line-height: 1.25;
+  line-height: 1.25;
   color: $subtle;
 }
 .thumb {
@@ -202,10 +215,10 @@ footer {
 /* Table */
 .details {
   font-size: .75em;
-  border-top: 1px dotted $dull;
+  border-top: 1px dotted $subtle;
   margin-bottom: 2em;
   tr {
-    border-bottom: 1px dotted $dull;
+    border-bottom: 1px dotted $subtle;
     th {
       padding: .2em 0;
       padding-right: 1.5em;
@@ -232,6 +245,6 @@ footer {
   color: $dull;
 }
 
-@include sticky-footer(96px, ".wrap", ".subwrap", footer);
+//@include sticky-footer(96px, ".wrap", ".subwrap", footer);
 
 ///* I got 99 problems, but this last line of jcurran-design ain't one */
