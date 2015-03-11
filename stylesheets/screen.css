@@ -314,106 +314,102 @@ body:after {
   box-sizing: border-box;
 }
 
-/* line 27, ../sass/partials/_jcurranstyle.scss */
+/* line 30, ../sass/partials/_jcurranstyle.scss */
 html {
   background-color: rgba(255, 255, 255, 0.9);
 }
 
-/* line 30, ../sass/partials/_jcurranstyle.scss */
+/* line 33, ../sass/partials/_jcurranstyle.scss */
 body {
+  color: rgba(68, 68, 68, 0.9);
   font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
   font-size: 22px;
   line-height: 1.5;
-  color: rgba(68, 68, 68, 0.9);
 }
 
 /* Text 
 ================================ */
-/* line 39, ../sass/partials/_jcurranstyle.scss */
+/* line 42, ../sass/partials/_jcurranstyle.scss */
 a {
   color: rgba(15, 38, 134, 0.9);
 }
-/* line 41, ../sass/partials/_jcurranstyle.scss */
+/* line 44, ../sass/partials/_jcurranstyle.scss */
 a:visited {
   color: rgba(15, 38, 134, 0.9);
 }
-/* line 42, ../sass/partials/_jcurranstyle.scss */
+/* line 45, ../sass/partials/_jcurranstyle.scss */
 a:hover {
   color: rgba(15, 38, 134, 0.9);
   text-decoration: underline;
 }
-/* line 45, ../sass/partials/_jcurranstyle.scss */
+/* line 48, ../sass/partials/_jcurranstyle.scss */
 a:hover.back {
   color: rgba(255, 255, 255, 0.9);
 }
-/* line 47, ../sass/partials/_jcurranstyle.scss */
+/* line 50, ../sass/partials/_jcurranstyle.scss */
 a:active {
   color: rgba(15, 38, 134, 0.9);
 }
-/* line 48, ../sass/partials/_jcurranstyle.scss */
+/* line 51, ../sass/partials/_jcurranstyle.scss */
 a.is-current-page {
   color: rgba(255, 129, 0, 0.9);
 }
-/* line 49, ../sass/partials/_jcurranstyle.scss */
+/* line 52, ../sass/partials/_jcurranstyle.scss */
 a.back {
   color: rgba(238, 238, 238, 0.9);
   text-decoration: none;
 }
-/* line 52, ../sass/partials/_jcurranstyle.scss */
+/* line 55, ../sass/partials/_jcurranstyle.scss */
 a.back:hover {
   text-decoration: underline;
 }
 
-/* line 57, ../sass/partials/_jcurranstyle.scss */
+/* line 60, ../sass/partials/_jcurranstyle.scss */
 h1 {
-  font-size: 2em;
   color: rgba(255, 129, 0, 0.9);
-  margin-bottom: 1em;
+  font-size: 2em;
+  margin: 0 0 1.5em;
+  line-height: 1.1;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.9);
 }
 
-/* line 62, ../sass/partials/_jcurranstyle.scss */
+/* line 67, ../sass/partials/_jcurranstyle.scss */
 h2 {
   font-weight: 600;
-  font-size: 1.25em;
+  font-size: 1.4em;
 }
 
-/* line 66, ../sass/partials/_jcurranstyle.scss */
+/* line 71, ../sass/partials/_jcurranstyle.scss */
+h3 {
+  font-weight: 600;
+  font-size: 1.2em;
+}
+
+/* line 75, ../sass/partials/_jcurranstyle.scss */
 h2, h3, h4 {
-  margin: .75em 0 .25em;
+  margin: .75em 0 .5em;
+  line-height: 1.1;
 }
 
-/* line 69, ../sass/partials/_jcurranstyle.scss */
+/* line 79, ../sass/partials/_jcurranstyle.scss */
 p {
-  margin-bottom: 1em;
   color: rgba(68, 68, 68, 0.9);
+  margin-bottom: 1em;
+}
+
+/* line 83, ../sass/partials/_jcurranstyle.scss */
+.beforelist {
+  margin-bottom: 0;
 }
 
 /* Layout 
 ================================ */
-/* line 76, ../sass/partials/_jcurranstyle.scss */
-header {
-  width: 32.20339%;
-  float: right;
-  margin-right: 0;
-}
-/* line 78, ../sass/partials/_jcurranstyle.scss */
-header h1 {
-  margin-bottom: 0;
-}
-
-/* line 82, ../sass/partials/_jcurranstyle.scss */
-aside {
-  width: 100%;
-  float: right;
-  margin-right: 0;
-}
-
-/* line 85, ../sass/partials/_jcurranstyle.scss */
+/* line 89, ../sass/partials/_jcurranstyle.scss */
 .wrap {
-  background-color: rgba(255, 255, 255, 0.9);
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  background-color: rgba(255, 255, 255, 0.9);
 }
 /* line 12, ../../../.rvm/gems/ruby-2.2.0/gems/susy-2.2.2/sass/susy/output/support/_clearfix.scss */
 .wrap:after {
@@ -422,205 +418,327 @@ aside {
   clear: both;
 }
 
-/* line 89, ../sass/partials/_jcurranstyle.scss */
+/* line 93, ../sass/partials/_jcurranstyle.scss */
+header {
+  width: 32.49551%;
+  float: left;
+  margin-left: 67.50449%;
+  margin-right: -100%;
+  padding: 15px;
+}
+/* line 96, ../sass/partials/_jcurranstyle.scss */
+header h1 {
+  margin-bottom: 0;
+}
+
+/* line 100, ../sass/partials/_jcurranstyle.scss */
+aside {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* line 103, ../sass/partials/_jcurranstyle.scss */
 .primary-header {
   background-color: rgba(255, 255, 255, 0.9);
 }
 
-/* line 92, ../sass/partials/_jcurranstyle.scss */
+/* line 106, ../sass/partials/_jcurranstyle.scss */
 .site-title {
   display: none;
 }
 
-/* line 95, ../sass/partials/_jcurranstyle.scss */
-nav {
-  padding: 15px;
-}
-/* line 98, ../sass/partials/_jcurranstyle.scss */
-nav li:nth-child(1) {
-  font-size: 1.3em;
-  margin-bottom: .5em;
-}
-/* line 102, ../sass/partials/_jcurranstyle.scss */
-nav li a {
-  text-decoration: none;
-}
-
-/* line 107, ../sass/partials/_jcurranstyle.scss */
-.page-menu {
+/* line 110, ../sass/partials/_jcurranstyle.scss */
+.page-menu li {
   font-size: .9em;
 }
-/* line 109, ../sass/partials/_jcurranstyle.scss */
-.page-menu a {
-  color: rgba(68, 68, 68, 0.9);
-}
-/* line 111, ../sass/partials/_jcurranstyle.scss */
-.page-menu a:visited {
-  color: rgba(68, 68, 68, 0.9);
-}
 /* line 112, ../sass/partials/_jcurranstyle.scss */
-.page-menu a:hover {
-  text-decoration: none;
-  color: rgba(255, 129, 0, 0.9);
+.page-menu li:nth-child(1) {
+  font-size: 1.2em;
+  margin-bottom: .5em;
 }
-/* line 116, ../sass/partials/_jcurranstyle.scss */
-.page-menu a:active {
+/* line 115, ../sass/partials/_jcurranstyle.scss */
+.page-menu li:nth-child(1) a {
   color: rgba(255, 129, 0, 0.9);
 }
 /* line 117, ../sass/partials/_jcurranstyle.scss */
-.page-menu a.is-current-page {
+.page-menu li:nth-child(1) a:visited {
+  color: rgba(255, 129, 0, 0.9);
+}
+/* line 120, ../sass/partials/_jcurranstyle.scss */
+.page-menu li a {
+  color: rgba(68, 68, 68, 0.9);
+  text-decoration: none;
+}
+/* line 123, ../sass/partials/_jcurranstyle.scss */
+.page-menu li a:visited {
+  color: rgba(68, 68, 68, 0.9);
+}
+/* line 124, ../sass/partials/_jcurranstyle.scss */
+.page-menu li a:hover {
+  color: rgba(255, 129, 0, 0.9);
+  text-decoration: none;
+}
+/* line 128, ../sass/partials/_jcurranstyle.scss */
+.page-menu li a:active {
+  color: rgba(255, 129, 0, 0.9);
+}
+/* line 129, ../sass/partials/_jcurranstyle.scss */
+.page-menu li a.is-current-page {
   color: rgba(255, 129, 0, 0.9);
 }
 
-/* line 120, ../sass/partials/_jcurranstyle.scss */
+/* line 133, ../sass/partials/_jcurranstyle.scss */
 .subpage-menu {
+  clear: both;
   font-size: .8em;
 }
-/* line 122, ../sass/partials/_jcurranstyle.scss */
+/* line 136, ../sass/partials/_jcurranstyle.scss */
 .subpage-menu li {
-  margin: 15px 0 0;
-  padding: 15px 0 0;
+  margin: 10px 0 0;
+  padding: 10px 0 0;
   border-top: 1px dotted #d4d7d9;
   list-style: none;
 }
-/* line 127, ../sass/partials/_jcurranstyle.scss */
+/* line 141, ../sass/partials/_jcurranstyle.scss */
 .subpage-menu li a {
   color: rgba(255, 129, 0, 0.9);
   border-radius: 12px;
   padding: 0 6px 0;
   text-decoration: none;
 }
-/* line 132, ../sass/partials/_jcurranstyle.scss */
+/* line 146, ../sass/partials/_jcurranstyle.scss */
 .subpage-menu li a:visited {
   color: rgba(255, 129, 0, 0.9);
 }
-/* line 133, ../sass/partials/_jcurranstyle.scss */
+/* line 147, ../sass/partials/_jcurranstyle.scss */
 .subpage-menu li a:hover {
   background-color: rgba(255, 129, 0, 0.9);
   color: rgba(255, 255, 255, 0.9);
 }
 
-/* line 141, ../sass/partials/_jcurranstyle.scss */
-.content {
-  width: 66.10169%;
-  float: left;
-  margin-right: 1.69492%;
+/* line 155, ../sass/partials/_jcurranstyle.scss */
+section {
   padding: 15px;
-  background-color: rgba(238, 238, 238, 0.9);
-}
-/* line 145, ../sass/partials/_jcurranstyle.scss */
-.content img {
-  border-bottom: 2px solid rgba(255, 129, 0, 0.9);
 }
 
-/* line 149, ../sass/partials/_jcurranstyle.scss */
-footer {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+/* line 158, ../sass/partials/_jcurranstyle.scss */
+.content {
+  width: 66.24776%;
+  float: left;
+  margin-right: 1.25673%;
+  background-color: rgba(238, 238, 238, 0.9);
+  box-shadow: inset 0 1px 2px rgba(187, 187, 187, 0.9);
 }
-/* line 12, ../../../.rvm/gems/ruby-2.2.0/gems/susy-2.2.2/sass/susy/output/support/_clearfix.scss */
-footer:after {
-  content: " ";
-  display: block;
+/* line 162, ../sass/partials/_jcurranstyle.scss */
+.content ul {
+  list-style-type: square;
+  padding-left: 1em;
+  margin-bottom: 1em;
+}
+
+/* line 168, ../sass/partials/_jcurranstyle.scss */
+.gallery, .content-body {
   clear: both;
 }
-/* line 151, ../sass/partials/_jcurranstyle.scss */
-footer p {
-  color: rgba(238, 238, 238, 0.9);
-}
-/* line 154, ../sass/partials/_jcurranstyle.scss */
-footer .whence, footer .copyright {
-  padding: 15px;
-  font-size: .8em;
-}
-/* line 158, ../sass/partials/_jcurranstyle.scss */
-footer .copyright {
-  color: rgba(255, 230, 204, 0.9);
-  text-shadow: 0 -0.5px 0 rgba(153, 77, 0, 0.9);
-  font-size: .6em;
-}
-/* line 164, ../sass/partials/_jcurranstyle.scss */
-footer .wrap {
-  background-color: rgba(255, 129, 0, 0.9);
-  width: 66.10169%;
-  float: left;
-  margin-right: 1.69492%;
-}
 
-/* line 169, ../sass/partials/_jcurranstyle.scss */
-.featured {
-  background-color: silver;
-  border-bottom: 1px solid rgba(238, 238, 238, 0.9);
-  height: 300px;
+/* line 171, ../sass/partials/_jcurranstyle.scss */
+.help-breadcrumbs {
+  color: red;
 }
 
 /* line 174, ../sass/partials/_jcurranstyle.scss */
-.caption {
+.thumb {
+  width: 32.49551%;
+  float: left;
+  margin-bottom: 1.25673%;
+}
+/* line 66, ../../../.rvm/gems/ruby-2.2.0/gems/susy-2.2.2/sass/susy/language/susy/_gallery.scss */
+.thumb:nth-child(3n + 1) {
+  margin-left: 0;
+  margin-right: -100%;
+  clear: both;
+  margin-left: 0;
+}
+/* line 66, ../../../.rvm/gems/ruby-2.2.0/gems/susy-2.2.2/sass/susy/language/susy/_gallery.scss */
+.thumb:nth-child(3n + 2) {
+  margin-left: 33.75224%;
+  margin-right: -100%;
+  clear: none;
+}
+/* line 66, ../../../.rvm/gems/ruby-2.2.0/gems/susy-2.2.2/sass/susy/language/susy/_gallery.scss */
+.thumb:nth-child(3n + 3) {
+  margin-left: 67.50449%;
+  margin-right: -100%;
+  clear: none;
+}
+/* line 177, ../sass/partials/_jcurranstyle.scss */
+.thumb img {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  border: 1px solid rgba(187, 187, 187, 0.9);
+  border-bottom: 2px solid rgba(255, 129, 0, 0.9);
+}
+/* line 182, ../sass/partials/_jcurranstyle.scss */
+.thumb .caption {
   font-size: .85em;
   line-height: 1.25;
   color: rgba(255, 129, 0, 0.9);
-  margin-bottom: 1.5em;
 }
 
-/* line 180, ../sass/partials/_jcurranstyle.scss */
+/* line 188, ../sass/partials/_jcurranstyle.scss */
 .tap {
   font-size: .75em;
   line-height: 1.25;
   color: rgba(187, 187, 187, 0.9);
 }
 
-/* line 186, ../sass/partials/_jcurranstyle.scss */
-.thumb img {
-  height: 144px;
-  max-height: 144px;
+/* line 194, ../sass/partials/_jcurranstyle.scss */
+footer p {
+  color: rgba(238, 238, 238, 0.9);
+}
+/* line 197, ../sass/partials/_jcurranstyle.scss */
+footer .whence, footer .copyright {
+  font-size: .8em;
+  padding: 15px;
+}
+/* line 201, ../sass/partials/_jcurranstyle.scss */
+footer .copyright {
+  color: rgba(255, 230, 204, 0.9);
+  text-shadow: 0 -0.5px 0 rgba(153, 77, 0, 0.9);
+  font-size: .6em;
+}
+/* line 206, ../sass/partials/_jcurranstyle.scss */
+footer .wrap {
+  box-shadow: inset 0 1px 1px #999;
+  background-color: rgba(255, 129, 0, 0.9);
 }
 
-/* line 191, ../sass/partials/_jcurranstyle.scss */
-.zcc-button {
-  margin: 30px 0 15px;
+/* line 211, ../sass/partials/_jcurranstyle.scss */
+.featured {
+  background-color: silver;
+  border-bottom: 1px solid rgba(238, 238, 238, 0.9);
+  height: 300px;
 }
 
 /* */
-@media screen and (min-width: 787px) and (max-width: 1140px) {
-  /* line 197, ../sass/partials/_jcurranstyle.scss */
+@media screen and (min-width: 788px) and (max-width: 1140px) {
+  /* line 222, ../sass/partials/_jcurranstyle.scss */
   body {
     font-size: 1.2em;
   }
+
+  /* line 225, ../sass/partials/_jcurranstyle.scss */
+  header {
+    width: 32.49551%;
+    float: left;
+    margin-left: 67.50449%;
+    margin-right: -100%;
+  }
+
+  /* line 228, ../sass/partials/_jcurranstyle.scss */
+  .content, footer .wrap {
+    width: 66.24776%;
+    float: left;
+    margin-right: 1.25673%;
+  }
+
+  /* line 231, ../sass/partials/_jcurranstyle.scss */
+  .thumb {
+    width: 32.49551%;
+    float: left;
+  }
+  /* line 66, ../../../.rvm/gems/ruby-2.2.0/gems/susy-2.2.2/sass/susy/language/susy/_gallery.scss */
+  .thumb:nth-child(3n + 1) {
+    margin-left: 0;
+    margin-right: -100%;
+    clear: both;
+    margin-left: 0;
+  }
+  /* line 66, ../../../.rvm/gems/ruby-2.2.0/gems/susy-2.2.2/sass/susy/language/susy/_gallery.scss */
+  .thumb:nth-child(3n + 2) {
+    margin-left: 33.75224%;
+    margin-right: -100%;
+    clear: none;
+  }
+  /* line 66, ../../../.rvm/gems/ruby-2.2.0/gems/susy-2.2.2/sass/susy/language/susy/_gallery.scss */
+  .thumb:nth-child(3n + 3) {
+    margin-left: 67.50449%;
+    margin-right: -100%;
+    clear: none;
+  }
+  /* line 233, ../sass/partials/_jcurranstyle.scss */
+  .thumb img {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 /* */
-@media screen and (max-width: 786px) {
-  /* line 204, ../sass/partials/_jcurranstyle.scss */
+@media screen and (max-width: 787px) {
+  /* line 241, ../sass/partials/_jcurranstyle.scss */
   body {
     font-size: 1em;
   }
 
-  /* line 207, ../sass/partials/_jcurranstyle.scss */
-  header, .content {
+  /* line 244, ../sass/partials/_jcurranstyle.scss */
+  header {
     width: 100%;
-    float: right;
+    float: left;
+    margin-left: 0;
     margin-right: 0;
   }
 
-  /* line 210, ../sass/partials/_jcurranstyle.scss */
-  footer .wrap {
+  /* line 247, ../sass/partials/_jcurranstyle.scss */
+  .content, footer .wrap {
     width: 100%;
-    float: right;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  /* line 250, ../sass/partials/_jcurranstyle.scss */
+  .thumb {
+    width: 49.37163%;
+    float: left;
+  }
+  /* line 66, ../../../.rvm/gems/ruby-2.2.0/gems/susy-2.2.2/sass/susy/language/susy/_gallery.scss */
+  .thumb:nth-child(2n + 1) {
+    margin-left: 0;
+    margin-right: -100%;
+    clear: both;
+    margin-left: 0;
+  }
+  /* line 66, ../../../.rvm/gems/ruby-2.2.0/gems/susy-2.2.2/sass/susy/language/susy/_gallery.scss */
+  .thumb:nth-child(2n + 2) {
+    margin-left: 50.62837%;
+    margin-right: -100%;
+    clear: none;
+  }
+  /* line 252, ../sass/partials/_jcurranstyle.scss */
+  .thumb img {
+    width: 100%;
+    float: left;
+    margin-left: 0;
     margin-right: 0;
   }
 }
 /* Table */
-/* line 216, ../sass/partials/_jcurranstyle.scss */
+/* line 260, ../sass/partials/_jcurranstyle.scss */
 .details {
   font-size: .75em;
   border-top: 1px dotted rgba(187, 187, 187, 0.9);
   margin-bottom: 2em;
 }
-/* line 220, ../sass/partials/_jcurranstyle.scss */
+/* line 264, ../sass/partials/_jcurranstyle.scss */
 .details tr {
   border-bottom: 1px dotted rgba(187, 187, 187, 0.9);
 }
-/* line 222, ../sass/partials/_jcurranstyle.scss */
+/* line 266, ../sass/partials/_jcurranstyle.scss */
 .details tr th {
   padding: .2em 0;
   padding-right: 1.5em;
@@ -630,12 +748,12 @@ footer .wrap {
   font-variant: small-caps;
   letter-spacing: 0.1em;
 }
-/* line 229, ../sass/partials/_jcurranstyle.scss */
+/* line 273, ../sass/partials/_jcurranstyle.scss */
 .details tr td {
   padding: .2em 0;
   line-height: 1.25;
 }
-/* line 233, ../sass/partials/_jcurranstyle.scss */
+/* line 277, ../sass/partials/_jcurranstyle.scss */
 .details tr span {
   text-transform: lowercase;
   font-variant: small-caps;
@@ -643,13 +761,13 @@ footer .wrap {
 }
 
 /* Lightbox */
-/* line 240, ../sass/partials/_jcurranstyle.scss */
+/* line 284, ../sass/partials/_jcurranstyle.scss */
 .lb-data .lb-caption {
   color: rgba(255, 129, 0, 0.9);
   font-weight: 400;
 }
 
-/* line 244, ../sass/partials/_jcurranstyle.scss */
+/* line 288, ../sass/partials/_jcurranstyle.scss */
 .lb-data .lb-number {
   color: rgba(238, 238, 238, 0.9);
 }

@@ -4,7 +4,10 @@
 
 $susy:(
   columns: 12,
-  global-box-sizing: border-box
+  gutters: .175,
+  output: isolate,
+  global-box-sizing: content-box,
+//  debug: (image:show)
 );
 
 $primary: rgba(255,129,0,.9); //#ff8100;
@@ -28,10 +31,10 @@ html {
   background-color: $brightest;
 }
 body {
+  color: $bodytext;  
   font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
   font-size: 22px;
   line-height: 1.5;
-  color: $bodytext;  
 }
 
 /* Text 
@@ -55,36 +58,47 @@ a {
   }
 }
 h1 {
-  font-size: 2em;
   color: $primary;
-  margin-bottom: 1em;
+  font-size: 2em;
+  margin: 0 0 1.5em;
+  line-height: 1.1;
+  text-shadow: 0 1px 0 $brightest;
 }
 h2 {
   font-weight: 600;
-  font-size: 1.25em;
+  font-size: 1.4em;
+}
+h3 {
+  font-weight: 600;
+  font-size: 1.2em;
 }
 h2, h3, h4 {
-  margin: .75em 0 .25em;
+  margin: .75em 0 .5em;
+  line-height: 1.1;
 }
 p {
-  margin-bottom: 1em;
   color: $bodytext;
+  margin-bottom: 1em;
+}
+.beforelist {
+  margin-bottom: 0;  
 }
 
 /* Layout 
 ================================ */
+.wrap {
+  @include container (1200px);
+  background-color: $brightest;
+}
 header { // sidebar
   @include span(4 of 12 last);
+  padding: 15px;
   h1 {
     margin-bottom: 0;
   }
 }
-aside { 
-  @include span(12 of 12 last);
-}
-.wrap {
-  background-color: $brightest;
-  @include container (1200px);
+aside {
+  @include span(12);  
 }
 .primary-header {
   background-color: $brightest;
@@ -92,36 +106,36 @@ aside {
 .site-title {
   display: none;
 }
-nav {
-  padding: 15px;
+.page-menu {
   li {
+    font-size: .9em;
     &:nth-child(1) {
-      font-size: 1.3em;
+      font-size: 1.2em;
       margin-bottom: .5em;
+      a {
+        color: $primary;  
+        &:visited { color: $primary; }
+      }
     }
     a {
+      color: $bodytext;  
       text-decoration: none;
+      &:visited { color: $bodytext; }
+      &:hover { 
+        color: $primary;
+        text-decoration: none; 
+      } 
+      &:active { color: $primary; }
+      &.is-current-page { color: $primary; }
     }
   } 
 }
-.page-menu {
-  font-size: .9em;
-  a {
-    color: $bodytext;  
-    &:visited { color: $bodytext; }
-    &:hover { 
-      text-decoration: none; 
-      color: $primary;
-    } 
-    &:active { color: $primary; }
-    &.is-current-page { color: $primary; }
-  }
-}
 .subpage-menu {
+  clear:both;
   font-size: .8em;
   li {
-    margin: 15px 0 0;
-    padding: 15px 0 0;
+    margin: 10px 0 0;
+    padding: 10px 0 0;
     border-top: 1px dotted #d4d7d9;
     list-style: none;
     a {
@@ -138,32 +152,60 @@ nav {
     }
   }
 }
+section {
+  padding: 15px;
+}
 .content {  // content
   @include span(8 of 12);
-  padding: 15px;
   background-color: $dull;
-  img {
-    border-bottom: 2px solid $primary;
+  box-shadow: inset 0 1px 2px $subtle;
+  ul {
+    list-style-type: square;
+    padding-left: 1em;
+    margin-bottom: 1em;
   }
 }
+.gallery, .content-body {
+  clear: both;
+}
+.help-breadcrumbs {
+  color: red;
+}
+.thumb {
+  @include gallery(4 of 12);
+  margin-bottom: gutter();
+  img {
+    @include span(4 of 4);
+    border: 1px solid $subtle;
+    border-bottom: 2px solid $primary;
+  }
+  .caption {
+    font-size: .85em;
+    line-height: 1.25;
+    color: $primary;
+  }
+}
+.tap {
+  font-size: .75em;
+  line-height: 1.25;
+  color: $subtle;
+}
 footer {
-  @include container(1200px);
   p {
     color: $dull;
   }
   .whence, .copyright {
-    padding: 15px;
     font-size: .8em;
+    padding: 15px;
   }
   .copyright {
     color: lighten(saturate($primary, 50%), 40%);
     text-shadow: 0 -.5px 0 darken($primary, 20%);
-    font-size: .6em;
-    
+    font-size: .6em;    
   }
   .wrap {
+    box-shadow: inset 0 1px 1px #999;
     background-color: $primary;
-    @include span(8 of 12);
   }
 }
 .featured {
@@ -171,45 +213,47 @@ footer {
   border-bottom: 1px solid $dull;
   height: 300px;
 }
-.caption {
-  font-size: .85em;
-  line-height: 1.25;
-  color: $primary;
-  margin-bottom: 1.5em;
-}
-.tap {
-  font-size: .75em;
-  line-height: 1.25;
-  color: $subtle;
-}
-.thumb {
-  img {
-    height: 144px;
-    max-height: 144px;
-  }
-}
 .zcc-button {
-  margin: 30px 0 15px;
+//  margin: 30px 0 15px;
 }
 
 /* */
-@media screen and (min-width: 787px) and (max-width: 1140px) {
+@media screen and (min-width: 788px) and (max-width: 1140px) {
   body {
     font-size: 1.2em;
   }
+  header { // sidebar
+    @include span(4 of 12 last);
+  }
+  .content, footer .wrap { 
+    @include span(8 of 12);    
+  }
+  .thumb {
+    @include gallery(4 of 12);
+    img {
+      @include span(4 of 4);
+    }
+  }
 }
 
 /* */
-@media screen and (max-width: 786px) {
+@media screen and (max-width: 787px) {
   body {
     font-size: 1em;
   }
-  header, .content { // sidebar
-    @include span(12 of 12 last);
+  header { // sidebar
+    @include span(12 of 12);
   }
-  footer .wrap { 
-    @include span(12 of 12 last);    
+  .content, footer .wrap { 
+    @include span(12 of 12);
   }
+  .thumb {
+    @include gallery(6 of 12);
+    img {
+      @include span(6 of 6);
+    }
+  }
+
 }
 
 /* Table */
