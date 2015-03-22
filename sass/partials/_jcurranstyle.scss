@@ -10,14 +10,14 @@ $susy:(
 //  debug: (image:show)
 );
 
-$primary: rgba(255,129,0,.9); //#ff8100;
-$contrast: rgba(15,38,134,.9); //#0F2686;
+$primary: rgba(255,129,0,1); //#ff8100;
+$contrast: rgba(15,38,134,1); //#0F2686;
 
-$brightest: rgba(255,255,255,.9); //#fff;
-$dull: rgba(238,238,238,.9); //#eee;
-$subtle: rgba(187,187,187,.9); //#bbb;
-$bodytext: rgba(68,68,68,.9); //#444;
-$darkest: rgba(34,34,34,.9); //#222;
+$brightest: rgba(255,255,255,1); //#fff;
+$dull: rgba(238,238,238,1); //#eee;
+$subtle: rgba(187,187,187,1); //#bbb;
+$bodytext: rgba(68,68,68,1); //#444;
+$darkest: rgba(34,34,34,1); //#222;
 
 @include border-box-sizing;
 
@@ -83,6 +83,9 @@ p {
 .beforelist {
   margin-bottom: 0;  
 }
+b, strong {
+  font-weight: 600;
+}
 
 /* Layout 
 ================================ */
@@ -108,9 +111,10 @@ aside {
 }
 .page-menu {
   li {
-    font-size: .9em;
+    font-size: 1em;
+    margin-bottom: .25em;
     &:nth-child(1) {
-      font-size: 1.2em;
+      font-size: 1.1em;
       margin-bottom: .5em;
       a {
         color: $primary;  
@@ -134,14 +138,15 @@ aside {
   clear:both;
   font-size: .8em;
   li {
-    margin: 10px 0 0;
-    padding: 10px 0 0;
+    margin: 12px 0 0 0;
+    padding: 13px 0 0 0;
     border-top: 1px dotted #d4d7d9;
     list-style: none;
     a {
       color: $primary;
+      padding: 0 8px 0;
+      margin: 2px 0 0 38px;
       border-radius: 12px;
-      padding: 0 6px 0;
       text-decoration: none;
       &:visited { color: $primary; }
       &:hover { 
@@ -152,8 +157,24 @@ aside {
     }
   }
 }
+.topic-link {
+  height: 24px;
+}
+.topic {
+  background-position: 0 8px;
+  background-repeat: no-repeat;
+  background-size: 36px 36px;
+}
+.subtopic {
+  background-position: 0 8px;
+  background-repeat: no-repeat;
+  background-size: 36px 36px;
+}
+.subtopics {
+  margin-left: 28px;
+}
 section {
-  padding: 15px;
+  padding: 0 15px;
 }
 .content {  // content
   @include span(8 of 12);
@@ -161,28 +182,69 @@ section {
   box-shadow: inset 0 1px 2px $subtle;
   ul {
     list-style-type: square;
-    padding-left: 1em;
+    margin-left: 1em;
     margin-bottom: 1em;
+    &.subtopics {
+      margin-left: 1.75em;
+      margin-top: 10px;
+    }
+  }
+  .subtopic {
+    background-position: 0 6px;
+  }
+  .subpage-menu li {
+    margin-top: 0px;
+    padding-bottom: 10px;
+  }
+  .topic {
+    background-position: 0 6px;
+  }
+  img {
+    @include span(8 of 8);
+    border: 1px dotted $subtle;
+    border-bottom: none;
+    margin-bottom: 15px;
+    &.headshot {
+      @include span(2 of 8);
+    }
+  }
+  .caption-full {
+    text-align: center;
+    font-size: .8em;
+    font-style: italic;
+    margin-bottom: 1.5em;
+  }
+  .caption {
+    font-size: .9em;
+  }
+  h2 {
+    clear:both;
+  }
+  h1 {
+    margin-top: 15px;
   }
 }
 .gallery, .content-body {
   clear: both;
 }
-.help-breadcrumbs {
-  color: red;
-}
 .thumb {
   @include gallery(4 of 12);
-  margin-bottom: gutter();
+  margin-bottom: 2em;
+  color: $primary;
+  font-size: .8em;
+  line-height: 1.25;
+  text-decoration: none;
+  &:hover {
+    color: $primary;
+  }
+  &:visited {
+    color: $primary;
+  }
   img {
     @include span(4 of 4);
     border: 1px solid $subtle;
     border-bottom: 2px solid $primary;
-  }
-  .caption {
-    font-size: .85em;
-    line-height: 1.25;
-    color: $primary;
+    margin-bottom: .25em;
   }
 }
 .tap {
@@ -199,25 +261,105 @@ footer {
     padding: 15px;
   }
   .copyright {
-    color: lighten(saturate($primary, 50%), 40%);
-    text-shadow: 0 -.5px 0 darken($primary, 20%);
-    font-size: .6em;    
+    color: $brightest;
+    text-shadow: 0 -.5px 0 darken($primary, 30%);
+    font-size: .8em;
+    text-decoration: none;
+    a {
+      color: $brightest;
+      text-decoration: none;
+    }
   }
   .wrap {
     box-shadow: inset 0 1px 1px #999;
     background-color: $primary;
   }
+  .whence {
+    a {
+      border-radius: 2px;
+      padding: 2px 6px;
+      text-decoration: none;
+      background-color: $dull;
+      color: $primary;
+      border-top: 1px solid $brightest;
+      border-bottom: 1px solid $subtle;
+      &:hover {
+        text-decoration: none;
+        background-color: lighten($dull, 10%);
+        color: $primary;
+      }
+    }
+  }
 }
 .featured {
-  background-color: silver;
-  border-bottom: 1px solid $dull;
-  height: 300px;
+  @include clearfix;
+  margin-left: -15px;
+  margin-right: -15px;
+  img {
+    @include push(1 of 16);
+    @include span (6 of 16);
+    border: none;
+    margin-top: 10px;
+  }
+  .description {
+    @include push(2 of 16);
+    @include span (6 of 16);
+    color: $brightest;
+    text-align: right;
+    text-shadow: 0 -1px 0 black;
+    h2 {
+      font-weight: 400;
+      font-size: 32px;
+      span {
+        font-weight: 200;
+        font-size: 16px;
+      }
+    }
+  }
+  &.one {
+    background: url(/assets/jim-map-col.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  &.three {
+    background: url(/assets/textl8r-feature1.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  &.five {
+    background-color: #ddd;
+  }
+}
+.featured-right {
+  @include clearfix;
+  margin-left: -15px;
+  margin-right: -15px;
+  border-bottom: none;
+  .description {
+    @include push(1 of 16);
+    @include span (7 of 16);
+  }
+  img {
+    @include push(1 of 16);
+    @include span (6 of 16);
+    border: none;
+    margin-top: 15px;
+  }
+  &.two {
+    background-color: $primary;
+  }
+  &.four {
+    background-color: #364f81;
+  }
+  &.six {
+    background-color: $dull;
+  }
 }
 .zcc-button {
-//  margin: 30px 0 15px;
+  clear:both;
 }
 
-/* */
+/* tablet */
 @media screen and (min-width: 788px) and (max-width: 1140px) {
   body {
     font-size: 1.2em;
@@ -234,12 +376,35 @@ footer {
       @include span(4 of 4);
     }
   }
+  .subpage-menu li {
+    margin-top: 0px;
+    padding-bottom: 10px;
+  }
+  .topic {
+    background-position: 0 4px;
+  }
+  .content ul.subtopics {
+    margin-top: 10px;
+  }
+  .subtopic {
+    background-position: 0 4px;
+  }
+  .featured {
+    .description {
+      h2 {
+        font-size: 24px;
+        span {
+          font-size: 14px;
+        }
+      }
+    }
+  }
 }
 
-/* */
+/* mobile */
 @media screen and (max-width: 787px) {
   body {
-    font-size: 1em;
+    font-size: 1.1em;
   }
   header { // sidebar
     @include span(12 of 12);
@@ -253,14 +418,36 @@ footer {
       @include span(6 of 6);
     }
   }
-
+  .subpage-menu li {
+    margin-top: 0px;
+    padding-bottom: 10px;
+  }
+  .topic {
+    background-position: 0 4px;
+  }
+  .content ul.subtopics {
+    margin-top: 10px;
+  }
+  .subtopic {
+    background-position: 0 4px;
+  }
+  .featured {
+    .description {
+      h2 {
+        font-size: 18px;
+        span {
+          font-size: 12px;
+        }
+      }
+    }
+  }
 }
 
 /* Table */
 .details {
   font-size: .75em;
   border-top: 1px dotted $subtle;
-  margin-bottom: 2em;
+  margin: 1.5em 0 2em;
   tr {
     border-bottom: 1px dotted $subtle;
     th {
@@ -287,8 +474,27 @@ footer {
 }
 .lb-data .lb-number {
   color: $dull;
+  margin-top: 3px;
+}
+.lb-data .lb-details {
+  line-height: 13px;
+}
+@font-face {
+  font-family: 'icomoon';
+  src: url('/images/fonts/icomoon.woff') format('woff'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+       url('/images/fonts/icomoon.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+.icon-envelop:before {
+    content: "\e945";
+    font-family: 'icomoon';
+}
+.icon-twitter:before {
+    content: "\ea91";
+    font-family: 'icomoon';
+}
+.icon-linkedin:before {
+    content: "\eac8";
+    font-family: 'icomoon';
 }
 
-//@include sticky-footer(96px, ".wrap", ".subwrap", footer);
-
-///* I got 99 problems, but this last line of jcurran-design ain't one */
+/* end jcurran custom styles */

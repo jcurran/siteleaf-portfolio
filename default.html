@@ -2,7 +2,11 @@
 <html class="no-js">
     <head>
         <meta charset="utf-8">
+        {% if home? %}
+        <title>{{site.title}}</title>
+        {% else %}
         <title>{{site.title}} | {{title}}</title>
+        {% endif %}
         <meta name="description" content="User Interface (UI) and Interaction Designer Jim Curran Vancouver">
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
@@ -69,16 +73,25 @@
                 <!-- BODY -->
                 {{body}}
                 <!-- SUBPAGE MENU -->
-                {% if pages %}
+                {% if pages.size > 0 %}
                     <ul class="subpage-menu">
-                    {% for subpage in pages %}
-                        <li><a href="{{subpage.url}}">{{subpage.title}}</a></li>
+                    {% for topic in pages %}
+                        <li class="topic" style="background-image: url(/images/{{ topic.title | replace:' ','%20' }}.svg)">
+                            <a href="{{ topic.url }}" class="topic-link">{{ topic.title }}</a>
+                        {% if topic.pages.size > 0 %}
+                            <ul class="subtopics">
+                            {% for subtopic in topic.pages %}
+                                <li class="subtopic" style="background-image: url(/images/{{ subtopic.title | replace:' ','%20' }}.svg)">
+                                    <a href="{{ subtopic.url }}" class="subtopic-link">{{ subtopic.title }}</a>
+                                </li>
+                            {% endfor %}
+                            </ul>
+                        {% endif %}
+                        </li>
                     {% endfor %}
                     </ul>
                 {% endif %}
             </section>
-
-            <div class="wrap-footer"></div><!-- sticky footer -->
         </div><!-- /wrap -->        
         <footer>
             <div class="wrap">
@@ -88,7 +101,12 @@
                 {% else %}
                     <div class="whence"><a href="{{current.url}}" class="back">&larr; Top</a></div>
                 {% endif %}
-                    <div class="copyright">&copy; 2015 Jim Curran</div>
+                    <div class="copyright">
+                        <a href="about">&copy; 2015 Jim Curran</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                        <a href="https://ca.linkedin.com/in/jecurran3">&nbsp;<span class="icon-linkedin"></span></a>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="https://twitter.com/jecurr">&nbsp;<span class="icon-twitter"></span></a>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="mailto:jimcee@gmail.com">&nbsp;<span class="icon-envelop"></span></a>
+                    </div>
             </div>
         </footer>
 
