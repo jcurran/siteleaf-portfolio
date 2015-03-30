@@ -12,7 +12,6 @@
         <meta name="MobileOptimized" content="320">
         <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
         <meta http-equiv="cleartype" content="on">
-        
         <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/touch/apple-touch-icon-144x144-precomposed.png">
         <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/touch/apple-touch-icon-114x114-precomposed.png">
         <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/touch/apple-touch-icon-72x72-precomposed.png">
@@ -20,19 +19,15 @@
         <link rel="shortcut icon" sizes="196x196" href="/images/touch/touch-icon-196x196.png">
         <link rel="shortcut icon" href="/images/touch/apple-touch-icon.png">
         <link rel="icon" type="image/x-icon" href="/favicon.ico" /> 
-
         <link rel="canonical" href="{{permalink}}" />
         <link rel="alternate" href="{{site.feed_url}}" type="application/rss+xml" />
-
         <!-- Tile icon for Win8 (144x144 + tile color) -->
         <meta name="msapplication-TileImage" content="/images/touch/apple-touch-icon-144x144-precomposed.png">
         <meta name="msapplication-TileColor" content="#222222">
-
         <!-- Add to homescreen for Chrome on Android -->
         <!--
         <meta name="mobile-web-app-capable" content="yes">
         -->
-
         <!-- This script prevents links from opening in Mobile Safari. https://gist.github.com/1042026 -->
         <!--
         <script>
@@ -50,7 +45,6 @@
         })(document, window.navigator, "standalone")
         </script>
         -->
-
         <link rel="stylesheet" href="/stylesheets/normalize.css" type="text/css">
         <link rel="stylesheet" href="/stylesheets/main.css" type="text/css">
         <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,900' type='text/css' />
@@ -60,18 +54,25 @@
     <body>
         <div class="wrap">
             <header class="primary-header">
-                <h1 class="site-title"><a href="/">{{site.title}}</a></h1>
-                <nav>
-                    <ul class="page-menu">
-                    {% for page in site.pages %}
-                        <li><a href="{{page.url}}"{% if page.url == url %} class="is-current-page"{% endif %}>{{page.title}}</a></li>
-                    {% endfor %}
-                    </ul>
-                </nav>
+                <div class="bounds">
+                    <h1 class="site-title"><a href="/">{{site.title}}</a></h1>
+                    <nav>
+                        <ul class="page-menu">
+                        {% for page in site.pages %}
+                            <li><a href="{{page.url}}"{% if page.url == url %} class="is-current-page"{% endif %}>{{page.title}}</a></li>
+                        {% endfor %}
+                        </ul>
+                   </nav>
+               </div>
             </header>
             <section class="content">
+                {% if pages.size > 0 %}
+                    <div class="padded">
+                {% endif %}
+                
                 <!-- BODY -->
                 {{body}}
+                
                 <!-- SUBPAGE MENU -->
                 {% if pages.size > 0 %}
                     <ul class="subpage-menu">
@@ -91,22 +92,42 @@
                     {% endfor %}
                     </ul>
                 {% endif %}
-            </section>
-        </div><!-- /wrap -->        
-        <footer>
-            <div class="wrap">
-                <!-- if PARENT -->
-                {% if parent %}
-                    <div class="whence"><a href="{{parent.url}}" class="back">&larr; Back to {{parent.title}}</a></div>
-                {% else %}
-                    <div class="whence"><a href="{{current.url}}" class="back">&larr; Top</a></div>
-                {% endif %}
-                    <div class="copyright">
-                        <a href="about">&copy; 2015 Jim Curran</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-                        <a href="https://ca.linkedin.com/in/jecurran3">&nbsp;<span class="icon-linkedin"></span></a>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="https://twitter.com/jecurr">&nbsp;<span class="icon-twitter"></span></a>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="mailto:jimcee@gmail.com">&nbsp;<span class="icon-envelop"></span></a>
+                
+                {% if pages.size > 0 %}
                     </div>
+                {% endif %}
+            </section>
+            <div class="content-footer"></div>
+        </div><!-- /wrap -->
+        <footer>
+            <div class="bounds">
+            <!-- if PARENT -->
+            {% if parent %}
+                <div class="whence"><a href="{{parent.url}}" class="back">&larr; Back to {{parent.title}}</a></div>
+            {% else %}
+                <div class="whence"><a href="{{current.url}}" class="back">&larr; Top</a></div>
+            {% endif %}
+                <div class="social">
+                    <p>
+                        <a href="https://ca.linkedin.com/in/jecurran3"><span class="icon-linkedin"></span></a>
+                        <a href="https://twitter.com/jecurr"><span class="icon-twitter"></span></a>
+                        <a href="mailto:jimcee@gmail.com"><span class="icon-mail4"></span></a>
+                    </p>
+                </div>
+                <div class="copyright"><a href="about">&copy; 2015 Jim Curran</a></div>
+                <div class="credits">
+                    <p>
+                        Thanks to the makers of
+                        <a href="http://compass-style.org/">Compass</a>, 
+                        <a href="https://html5boilerplate.com/">HTML5 Boilerplate</a>,
+                        <a href="https://icomoon.io/">IcoMoon</a>, 
+                        <a href="http://lokeshdhakar.com/projects/lightbox2/">Lightbox</a>,
+                        <a href="http://modernizr.com/">Modernizr</a>, 
+                        <a href="http://sass-lang.com/">Sass</a>, and 
+                        <a href="http://susy.oddbird.net/">Susy</a>.
+                        <br/>Content managed by <a href="http://www.siteleaf.com/">Siteleaf</a>.
+                    </p>
+                </div>
             </div>
         </footer>
 
