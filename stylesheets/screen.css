@@ -1531,13 +1531,19 @@ img {
   background-position: center 25%;
   box-shadow: inset 0 0.5px 1px #444444;
 }
-/* line 280, ../sass/partials/_jcurranstyle.scss */
+/* line 279, ../sass/partials/_jcurranstyle.scss */
+.featured.one img {
+  width: 40.67797%;
+  float: left;
+  margin-right: 1.69492%;
+}
+/* line 283, ../sass/partials/_jcurranstyle.scss */
 .featured.two {
   min-height: 0;
   background-color: #ff8100;
   box-shadow: inset 0 .5px 1px #666;
 }
-/* line 285, ../sass/partials/_jcurranstyle.scss */
+/* line 288, ../sass/partials/_jcurranstyle.scss */
 .featured.two .featured-bounds p {
   margin-left: 8.47458%;
   width: 83.05085%;
@@ -1546,7 +1552,7 @@ img {
   text-align: center;
   color: white;
 }
-/* line 293, ../sass/partials/_jcurranstyle.scss */
+/* line 296, ../sass/partials/_jcurranstyle.scss */
 .featured.three {
   /** To edit this background, follow this link:
   http://svgeneration.com/generate/Stucco?background=555555&background-intensity=0.7&burn-color=111111&burn-intensity=0.1&
@@ -1556,13 +1562,13 @@ img {
   box-shadow: inset 0 0.5px 1px #222222;
   padding-top: .5em;
 }
-/* line 304, ../sass/partials/_jcurranstyle.scss */
+/* line 307, ../sass/partials/_jcurranstyle.scss */
 .featured.three img {
   width: 40.67797%;
   float: left;
   margin-right: 1.69492%;
 }
-/* line 307, ../sass/partials/_jcurranstyle.scss */
+/* line 310, ../sass/partials/_jcurranstyle.scss */
 .featured.three .description {
   width: 49.15254%;
   float: right;
@@ -1571,13 +1577,13 @@ img {
   text-align: right;
   font-size: .9em;
 }
-/* line 312, ../sass/partials/_jcurranstyle.scss */
+/* line 315, ../sass/partials/_jcurranstyle.scss */
 .featured.three .description h2, .featured.three .description h3 {
   color: white;
   text-shadow: 0 -0.5px 0 #222222;
   margin: 0 0 .5em;
 }
-/* line 317, ../sass/partials/_jcurranstyle.scss */
+/* line 320, ../sass/partials/_jcurranstyle.scss */
 .featured.three .description img {
   width: 21.05263%;
   float: left;
@@ -1585,12 +1591,12 @@ img {
   float: right;
   margin-right: 0;
 }
-/* line 324, ../sass/partials/_jcurranstyle.scss */
+/* line 327, ../sass/partials/_jcurranstyle.scss */
 .featured.four {
   background-color: #ddd;
   box-shadow: inset 0 0.5px 1px #222222;
 }
-/* line 328, ../sass/partials/_jcurranstyle.scss */
+/* line 331, ../sass/partials/_jcurranstyle.scss */
 .featured.five {
   /** To edit this background, follow this link:
   http://svgeneration.com/generate/Diagonal-Stripes?scale=5&stripe=62c23c&stripe-width=.5&background=61b544&
@@ -1600,77 +1606,77 @@ img {
   box-shadow: inset 0 0.5px 1px #444444;
   padding-top: .5em;
 }
-/* line 341, ../sass/partials/_jcurranstyle.scss */
+/* line 344, ../sass/partials/_jcurranstyle.scss */
 .featured.five .description {
   width: 49.15254%;
   float: left;
   margin-right: 1.69492%;
 }
-/* line 343, ../sass/partials/_jcurranstyle.scss */
+/* line 346, ../sass/partials/_jcurranstyle.scss */
 .featured.five .description h2, .featured.five .description h3 {
   color: white;
   text-shadow: 0 -0.5px 0 #222222;
   margin: 0 0 .5em;
 }
-/* line 349, ../sass/partials/_jcurranstyle.scss */
+/* line 352, ../sass/partials/_jcurranstyle.scss */
 .featured.five img {
   width: 49.15254%;
   float: right;
   margin-right: 0;
 }
-/* line 353, ../sass/partials/_jcurranstyle.scss */
+/* line 356, ../sass/partials/_jcurranstyle.scss */
 .featured.six {
   background-color: #ddd;
   box-shadow: inset 0 0.5px 1px #444444;
 }
-/* line 356, ../sass/partials/_jcurranstyle.scss */
+/* line 359, ../sass/partials/_jcurranstyle.scss */
 .featured.six h2 {
   margin: .5em 0 1em;
 }
-/* line 359, ../sass/partials/_jcurranstyle.scss */
+/* line 362, ../sass/partials/_jcurranstyle.scss */
 .featured.six .project {
   width: 31.81818%;
   float: left;
   margin-right: 2.27273%;
 }
-/* line 362, ../sass/partials/_jcurranstyle.scss */
+/* line 365, ../sass/partials/_jcurranstyle.scss */
 .featured.six .project-last {
   width: 31.81818%;
   float: right;
   margin-right: 0;
 }
-/* line 365, ../sass/partials/_jcurranstyle.scss */
+/* line 368, ../sass/partials/_jcurranstyle.scss */
 .featured.six img {
   width: 64.28571%;
   float: left;
   margin-right: 7.14286%;
   box-shadow: 0 1px 2px #444444;
 }
-/* line 369, ../sass/partials/_jcurranstyle.scss */
+/* line 372, ../sass/partials/_jcurranstyle.scss */
 .featured.six span {
   width: 100%;
   float: left;
   margin-left: 0;
   margin-right: 0;
 }
-/* line 373, ../sass/partials/_jcurranstyle.scss */
+/* line 376, ../sass/partials/_jcurranstyle.scss */
 .featured.seven {
   background-color: #364f81;
   box-shadow: inset 0 0.5px 1px #222222;
   padding-bottom: 2em;
 }
-/* line 377, ../sass/partials/_jcurranstyle.scss */
+/* line 380, ../sass/partials/_jcurranstyle.scss */
 .featured.seven h3 {
   color: white;
   text-shadow: 0 0.5px 0 #222222;
   padding-bottom: .25em;
   margin-bottom: .25em;
 }
-/* line 383, ../sass/partials/_jcurranstyle.scss */
+/* line 386, ../sass/partials/_jcurranstyle.scss */
 .featured.seven .featured-bounds {
   padding-top: .5em;
 }
-/* line 385, ../sass/partials/_jcurranstyle.scss */
+/* line 388, ../sass/partials/_jcurranstyle.scss */
 .featured.seven .featured-bounds .univ {
   width: 31.81818%;
   float: left;
@@ -1678,13 +1684,13 @@ img {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 388, ../sass/partials/_jcurranstyle.scss */
+/* line 391, ../sass/partials/_jcurranstyle.scss */
 .featured.seven .featured-bounds .univ .unit {
   width: 100%;
   float: right;
   margin-right: 0;
 }
-/* line 390, ../sass/partials/_jcurranstyle.scss */
+/* line 393, ../sass/partials/_jcurranstyle.scss */
 .featured.seven .featured-bounds .univ .unit img {
   width: 64.28571%;
   float: left;
@@ -1692,7 +1698,7 @@ img {
   margin-top: 1em;
   margin-bottom: .25em;
 }
-/* line 395, ../sass/partials/_jcurranstyle.scss */
+/* line 398, ../sass/partials/_jcurranstyle.scss */
 .featured.seven .featured-bounds .univ .unit span {
   width: 100%;
   float: right;
@@ -1703,7 +1709,7 @@ img {
   line-height: 1.1;
   font-size: .7em;
 }
-/* line 403, ../sass/partials/_jcurranstyle.scss */
+/* line 406, ../sass/partials/_jcurranstyle.scss */
 .featured.seven .featured-bounds .corp1 {
   width: 31.81818%;
   float: left;
@@ -1711,13 +1717,13 @@ img {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 406, ../sass/partials/_jcurranstyle.scss */
+/* line 409, ../sass/partials/_jcurranstyle.scss */
 .featured.seven .featured-bounds .corp1 .unit {
   width: 100%;
   float: right;
   margin-right: 0;
 }
-/* line 408, ../sass/partials/_jcurranstyle.scss */
+/* line 411, ../sass/partials/_jcurranstyle.scss */
 .featured.seven .featured-bounds .corp1 .unit img {
   width: 64.28571%;
   float: left;
@@ -1725,7 +1731,7 @@ img {
   margin-top: 1em;
   margin-bottom: .25em;
 }
-/* line 413, ../sass/partials/_jcurranstyle.scss */
+/* line 416, ../sass/partials/_jcurranstyle.scss */
 .featured.seven .featured-bounds .corp1 .unit span {
   width: 100%;
   float: right;
@@ -1736,7 +1742,7 @@ img {
   line-height: 1.1;
   font-size: .7em;
 }
-/* line 421, ../sass/partials/_jcurranstyle.scss */
+/* line 424, ../sass/partials/_jcurranstyle.scss */
 .featured.seven .featured-bounds .corp2 {
   width: 31.81818%;
   float: right;
@@ -1744,13 +1750,13 @@ img {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 424, ../sass/partials/_jcurranstyle.scss */
+/* line 427, ../sass/partials/_jcurranstyle.scss */
 .featured.seven .featured-bounds .corp2 .unit {
   width: 100%;
   float: right;
   margin-right: 0;
 }
-/* line 426, ../sass/partials/_jcurranstyle.scss */
+/* line 429, ../sass/partials/_jcurranstyle.scss */
 .featured.seven .featured-bounds .corp2 .unit img {
   width: 64.28571%;
   float: left;
@@ -1758,7 +1764,7 @@ img {
   margin-top: 1em;
   margin-bottom: .25em;
 }
-/* line 431, ../sass/partials/_jcurranstyle.scss */
+/* line 434, ../sass/partials/_jcurranstyle.scss */
 .featured.seven .featured-bounds .corp2 .unit span {
   width: 100%;
   float: right;
@@ -1771,19 +1777,19 @@ img {
 }
 
 /* Gallery */
-/* line 444, ../sass/partials/_jcurranstyle.scss */
+/* line 447, ../sass/partials/_jcurranstyle.scss */
 .tap {
   font-size: .75em;
   line-height: 1.25;
   color: #bbbbbb;
 }
 
-/* line 449, ../sass/partials/_jcurranstyle.scss */
+/* line 452, ../sass/partials/_jcurranstyle.scss */
 .gallery {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 451, ../sass/partials/_jcurranstyle.scss */
+/* line 454, ../sass/partials/_jcurranstyle.scss */
 .gallery .thumb {
   color: #ff8100;
   display: block;
@@ -1794,7 +1800,7 @@ img {
   margin-right: 5.26316%;
   margin-right: 26.31579%;
 }
-/* line 458, ../sass/partials/_jcurranstyle.scss */
+/* line 461, ../sass/partials/_jcurranstyle.scss */
 .gallery .thumb img {
   width: 100%;
   float: left;
@@ -1807,17 +1813,17 @@ img {
 }
 
 /* Table */
-/* line 469, ../sass/partials/_jcurranstyle.scss */
+/* line 472, ../sass/partials/_jcurranstyle.scss */
 .details, .contact {
   font-size: .75em;
   border-top: 1px dotted #bbbbbb;
   margin: 1.5em 0 2em;
 }
-/* line 473, ../sass/partials/_jcurranstyle.scss */
+/* line 476, ../sass/partials/_jcurranstyle.scss */
 .details tr, .contact tr {
   border-bottom: 1px dotted #bbbbbb;
 }
-/* line 475, ../sass/partials/_jcurranstyle.scss */
+/* line 478, ../sass/partials/_jcurranstyle.scss */
 .details tr th, .contact tr th {
   padding: .2em 0;
   padding-right: 1.5em;
@@ -1827,54 +1833,54 @@ img {
   font-variant: small-caps;
   letter-spacing: 0.1em;
 }
-/* line 482, ../sass/partials/_jcurranstyle.scss */
+/* line 485, ../sass/partials/_jcurranstyle.scss */
 .details tr td, .contact tr td {
   padding: .2em 0;
   line-height: 1.25;
 }
-/* line 486, ../sass/partials/_jcurranstyle.scss */
+/* line 489, ../sass/partials/_jcurranstyle.scss */
 .details tr span, .contact tr span {
   text-transform: lowercase;
   font-variant: small-caps;
   letter-spacing: 0.1em;
 }
 
-/* line 491, ../sass/partials/_jcurranstyle.scss */
+/* line 494, ../sass/partials/_jcurranstyle.scss */
 .contact-text {
   width: 74.57627%;
   float: right;
   margin-right: 0;
 }
-/* line 493, ../sass/partials/_jcurranstyle.scss */
+/* line 496, ../sass/partials/_jcurranstyle.scss */
 .contact-text .contact {
   margin-top: 0;
 }
 
 /* Button fix */
-/* line 500, ../sass/partials/_jcurranstyle.scss */
+/* line 503, ../sass/partials/_jcurranstyle.scss */
 a.button:visited {
   color: #ffffff;
 }
 
 /* Lightbox */
-/* line 507, ../sass/partials/_jcurranstyle.scss */
+/* line 510, ../sass/partials/_jcurranstyle.scss */
 .lb-data .lb-caption {
   color: #ff8100;
   font-weight: 400;
 }
 
-/* line 511, ../sass/partials/_jcurranstyle.scss */
+/* line 514, ../sass/partials/_jcurranstyle.scss */
 .lb-data .lb-number {
   color: #eeeeee;
   margin-top: 3px;
 }
 
-/* line 515, ../sass/partials/_jcurranstyle.scss */
+/* line 518, ../sass/partials/_jcurranstyle.scss */
 .lb-data .lb-details {
   line-height: 13px;
 }
 
-/* line 520, ../sass/partials/_jcurranstyle.scss */
+/* line 523, ../sass/partials/_jcurranstyle.scss */
 .inner-pad + p,
 .padded + p {
   display: none;
@@ -1882,29 +1888,29 @@ a.button:visited {
 
 /* Media queries */
 @media screen and (min-width: 501px) and (max-width: 700px) {
-  /* line 527, ../sass/partials/_jcurranstyle.scss */
+  /* line 530, ../sass/partials/_jcurranstyle.scss */
   body {
     font-size: .75em;
   }
 
-  /* line 530, ../sass/partials/_jcurranstyle.scss */
+  /* line 533, ../sass/partials/_jcurranstyle.scss */
   .primary-header {
     font-size: 1.25em;
     padding-bottom: .4em;
   }
 
-  /* line 534, ../sass/partials/_jcurranstyle.scss */
+  /* line 537, ../sass/partials/_jcurranstyle.scss */
   .featured {
     min-height: 260px;
   }
 
-  /* line 537, ../sass/partials/_jcurranstyle.scss */
+  /* line 540, ../sass/partials/_jcurranstyle.scss */
   .topic, .subtopic {
     background-position: 0 9px;
     background-size: 34px 34px;
   }
 
-  /* line 542, ../sass/partials/_jcurranstyle.scss */
+  /* line 545, ../sass/partials/_jcurranstyle.scss */
   .gallery .thumb {
     width: 44.44444%;
     float: left;
@@ -1923,7 +1929,7 @@ a.button:visited {
     margin-right: -100%;
     clear: none;
   }
-  /* line 545, ../sass/partials/_jcurranstyle.scss */
+  /* line 548, ../sass/partials/_jcurranstyle.scss */
   .gallery .thumb img {
     width: 100%;
     float: left;
@@ -1932,29 +1938,29 @@ a.button:visited {
   }
 }
 @media screen and (min-width: 701px) and (max-width: 1000px) {
-  /* line 552, ../sass/partials/_jcurranstyle.scss */
+  /* line 555, ../sass/partials/_jcurranstyle.scss */
   body {
     font-size: .85em;
   }
 
-  /* line 556, ../sass/partials/_jcurranstyle.scss */
+  /* line 559, ../sass/partials/_jcurranstyle.scss */
   .padded .inner-pad {
     width: 83.05085%;
     float: left;
     margin-right: 1.69492%;
   }
 
-  /* line 560, ../sass/partials/_jcurranstyle.scss */
+  /* line 563, ../sass/partials/_jcurranstyle.scss */
   .primary-header {
     font-size: 1.25em;
     padding-bottom: .25em;
   }
 
-  /* line 564, ../sass/partials/_jcurranstyle.scss */
+  /* line 567, ../sass/partials/_jcurranstyle.scss */
   .featured {
     min-height: 360px;
   }
-  /* line 568, ../sass/partials/_jcurranstyle.scss */
+  /* line 571, ../sass/partials/_jcurranstyle.scss */
   .featured.two .featured-bounds p {
     margin-left: 8.47458%;
     width: 83.05085%;
@@ -1962,16 +1968,16 @@ a.button:visited {
     margin-right: 1.69492%;
     font-size: .9em;
   }
-  /* line 576, ../sass/partials/_jcurranstyle.scss */
+  /* line 579, ../sass/partials/_jcurranstyle.scss */
   .featured.three .description, .featured.five .description {
     font-size: 1.25em;
   }
-  /* line 584, ../sass/partials/_jcurranstyle.scss */
+  /* line 587, ../sass/partials/_jcurranstyle.scss */
   .featured.seven .featured-bounds .univ .unit span, .featured.seven .featured-bounds .corp1 .unit span, .featured.seven .featured-bounds .corp2 .unit span {
     font-size: .8em;
   }
 
-  /* line 592, ../sass/partials/_jcurranstyle.scss */
+  /* line 595, ../sass/partials/_jcurranstyle.scss */
   .subpage-menu {
     font-size: .9em;
     width: 83.05085%;
@@ -1979,13 +1985,13 @@ a.button:visited {
     margin-right: 1.69492%;
   }
 
-  /* line 596, ../sass/partials/_jcurranstyle.scss */
+  /* line 599, ../sass/partials/_jcurranstyle.scss */
   .topic, .subtopic {
     background-position: 0 9px;
     background-size: 34px 34px;
   }
 
-  /* line 601, ../sass/partials/_jcurranstyle.scss */
+  /* line 604, ../sass/partials/_jcurranstyle.scss */
   .gallery .thumb {
     width: 44.44444%;
     float: left;
@@ -2005,7 +2011,7 @@ a.button:visited {
     margin-right: -100%;
     clear: none;
   }
-  /* line 605, ../sass/partials/_jcurranstyle.scss */
+  /* line 608, ../sass/partials/_jcurranstyle.scss */
   .gallery .thumb img {
     width: 100%;
     float: left;
@@ -2014,12 +2020,12 @@ a.button:visited {
   }
 }
 @media screen and (min-width: 1001px) and (max-width: 1200px) {
-  /* line 612, ../sass/partials/_jcurranstyle.scss */
+  /* line 615, ../sass/partials/_jcurranstyle.scss */
   body {
     font-size: .9em;
   }
 
-  /* line 615, ../sass/partials/_jcurranstyle.scss */
+  /* line 618, ../sass/partials/_jcurranstyle.scss */
   aside {
     display: block;
     width: 32.20339%;
@@ -2027,24 +2033,24 @@ a.button:visited {
     margin-right: 0;
   }
 
-  /* line 620, ../sass/partials/_jcurranstyle.scss */
+  /* line 623, ../sass/partials/_jcurranstyle.scss */
   .padded .inner-pad {
     width: 66.10169%;
     float: left;
     margin-right: 1.69492%;
   }
 
-  /* line 624, ../sass/partials/_jcurranstyle.scss */
+  /* line 627, ../sass/partials/_jcurranstyle.scss */
   .primary-header {
     font-size: 1.25em;
     padding-bottom: .25em;
   }
 
-  /* line 628, ../sass/partials/_jcurranstyle.scss */
+  /* line 631, ../sass/partials/_jcurranstyle.scss */
   .featured {
     min-height: 460px;
   }
-  /* line 632, ../sass/partials/_jcurranstyle.scss */
+  /* line 635, ../sass/partials/_jcurranstyle.scss */
   .featured.two .featured-bounds p {
     margin-left: 16.94915%;
     width: 66.10169%;
@@ -2052,20 +2058,20 @@ a.button:visited {
     margin-right: 1.69492%;
     font-size: .9em;
   }
-  /* line 640, ../sass/partials/_jcurranstyle.scss */
+  /* line 643, ../sass/partials/_jcurranstyle.scss */
   .featured.three .description, .featured.five .description {
     font-size: 1.4em;
   }
-  /* line 645, ../sass/partials/_jcurranstyle.scss */
+  /* line 648, ../sass/partials/_jcurranstyle.scss */
   .featured.seven h3 {
     font-size: 1.25em;
   }
-  /* line 651, ../sass/partials/_jcurranstyle.scss */
+  /* line 654, ../sass/partials/_jcurranstyle.scss */
   .featured.seven .featured-bounds .univ .unit span, .featured.seven .featured-bounds .corp1 .unit span, .featured.seven .featured-bounds .corp2 .unit span {
     font-size: .9em;
   }
 
-  /* line 659, ../sass/partials/_jcurranstyle.scss */
+  /* line 662, ../sass/partials/_jcurranstyle.scss */
   .subpage-menu {
     font-size: .9em;
     width: 66.10169%;
@@ -2073,13 +2079,13 @@ a.button:visited {
     margin-right: 1.69492%;
   }
 
-  /* line 663, ../sass/partials/_jcurranstyle.scss */
+  /* line 666, ../sass/partials/_jcurranstyle.scss */
   .topic, .subtopic {
     background-position: 0 10px;
     background-size: 36px 36px;
   }
 
-  /* line 668, ../sass/partials/_jcurranstyle.scss */
+  /* line 671, ../sass/partials/_jcurranstyle.scss */
   .gallery .thumb {
     width: 44.44444%;
     float: left;
@@ -2099,7 +2105,7 @@ a.button:visited {
     margin-right: -100%;
     clear: none;
   }
-  /* line 672, ../sass/partials/_jcurranstyle.scss */
+  /* line 675, ../sass/partials/_jcurranstyle.scss */
   .gallery .thumb img {
     width: 100%;
     float: left;
@@ -2108,12 +2114,12 @@ a.button:visited {
   }
 }
 @media screen and (min-width: 1201px) and (max-width: 1600px) {
-  /* line 679, ../sass/partials/_jcurranstyle.scss */
+  /* line 682, ../sass/partials/_jcurranstyle.scss */
   body {
     font-size: 1em;
   }
 
-  /* line 682, ../sass/partials/_jcurranstyle.scss */
+  /* line 685, ../sass/partials/_jcurranstyle.scss */
   aside {
     display: block;
     width: 32.20339%;
@@ -2121,13 +2127,13 @@ a.button:visited {
     margin-right: 0;
   }
 
-  /* line 686, ../sass/partials/_jcurranstyle.scss */
+  /* line 689, ../sass/partials/_jcurranstyle.scss */
   .primary-header {
     font-size: 1.25em;
     padding-bottom: .2em;
   }
 
-  /* line 690, ../sass/partials/_jcurranstyle.scss */
+  /* line 693, ../sass/partials/_jcurranstyle.scss */
   .bounds {
     max-width: 1200px;
     margin-left: auto;
@@ -2140,7 +2146,7 @@ a.button:visited {
     clear: both;
   }
 
-  /* line 693, ../sass/partials/_jcurranstyle.scss */
+  /* line 696, ../sass/partials/_jcurranstyle.scss */
   .padded {
     max-width: 1200px;
     margin-left: auto;
@@ -2152,14 +2158,14 @@ a.button:visited {
     display: block;
     clear: both;
   }
-  /* line 695, ../sass/partials/_jcurranstyle.scss */
+  /* line 698, ../sass/partials/_jcurranstyle.scss */
   .padded .inner-pad {
     width: 66.10169%;
     float: left;
     margin-right: 1.69492%;
   }
 
-  /* line 699, ../sass/partials/_jcurranstyle.scss */
+  /* line 702, ../sass/partials/_jcurranstyle.scss */
   .featured {
     min-height: 500px;
     max-width: 100%;
@@ -2172,7 +2178,7 @@ a.button:visited {
     display: block;
     clear: both;
   }
-  /* line 702, ../sass/partials/_jcurranstyle.scss */
+  /* line 705, ../sass/partials/_jcurranstyle.scss */
   .featured .featured-bounds {
     max-width: 1200px;
     margin-left: auto;
@@ -2184,7 +2190,7 @@ a.button:visited {
     display: block;
     clear: both;
   }
-  /* line 707, ../sass/partials/_jcurranstyle.scss */
+  /* line 710, ../sass/partials/_jcurranstyle.scss */
   .featured.two .featured-bounds p {
     margin-left: 16.94915%;
     width: 66.10169%;
@@ -2192,24 +2198,24 @@ a.button:visited {
     margin-right: 1.69492%;
     margin-bottom: 0;
   }
-  /* line 715, ../sass/partials/_jcurranstyle.scss */
+  /* line 718, ../sass/partials/_jcurranstyle.scss */
   .featured.three .description, .featured.five .description {
     font-size: 1.5em;
   }
-  /* line 719, ../sass/partials/_jcurranstyle.scss */
+  /* line 722, ../sass/partials/_jcurranstyle.scss */
   .featured.seven {
     min-height: 500px;
   }
-  /* line 721, ../sass/partials/_jcurranstyle.scss */
+  /* line 724, ../sass/partials/_jcurranstyle.scss */
   .featured.seven h3 {
     font-size: 1.25em;
   }
-  /* line 727, ../sass/partials/_jcurranstyle.scss */
+  /* line 730, ../sass/partials/_jcurranstyle.scss */
   .featured.seven .featured-bounds .univ .unit span, .featured.seven .featured-bounds .corp1 .unit span, .featured.seven .featured-bounds .corp2 .unit span {
     font-size: .9em;
   }
 
-  /* line 735, ../sass/partials/_jcurranstyle.scss */
+  /* line 738, ../sass/partials/_jcurranstyle.scss */
   .subpage-menu {
     font-size: .85em;
     width: 66.10169%;
@@ -2217,13 +2223,13 @@ a.button:visited {
     margin-right: 1.69492%;
   }
 
-  /* line 739, ../sass/partials/_jcurranstyle.scss */
+  /* line 742, ../sass/partials/_jcurranstyle.scss */
   .topic, .subtopic {
     background-position: 0 10px;
     background-size: 36px 36px;
   }
 
-  /* line 744, ../sass/partials/_jcurranstyle.scss */
+  /* line 747, ../sass/partials/_jcurranstyle.scss */
   .gallery .thumb {
     width: 44.44444%;
     float: left;
@@ -2243,7 +2249,7 @@ a.button:visited {
     margin-right: -100%;
     clear: none;
   }
-  /* line 748, ../sass/partials/_jcurranstyle.scss */
+  /* line 751, ../sass/partials/_jcurranstyle.scss */
   .gallery .thumb img {
     width: 100%;
     float: left;
@@ -2252,12 +2258,12 @@ a.button:visited {
   }
 }
 @media screen and (min-width: 1601px) {
-  /* line 755, ../sass/partials/_jcurranstyle.scss */
+  /* line 758, ../sass/partials/_jcurranstyle.scss */
   body {
     font-size: 1.3em;
   }
 
-  /* line 758, ../sass/partials/_jcurranstyle.scss */
+  /* line 761, ../sass/partials/_jcurranstyle.scss */
   aside {
     display: block;
     width: 32.20339%;
@@ -2265,13 +2271,13 @@ a.button:visited {
     margin-right: 0;
   }
 
-  /* line 762, ../sass/partials/_jcurranstyle.scss */
+  /* line 765, ../sass/partials/_jcurranstyle.scss */
   .primary-header {
     font-size: 1.25em;
     padding-bottom: .2em;
   }
 
-  /* line 766, ../sass/partials/_jcurranstyle.scss */
+  /* line 769, ../sass/partials/_jcurranstyle.scss */
   .bounds {
     max-width: 1200px;
     margin-left: auto;
@@ -2284,7 +2290,7 @@ a.button:visited {
     clear: both;
   }
 
-  /* line 770, ../sass/partials/_jcurranstyle.scss */
+  /* line 773, ../sass/partials/_jcurranstyle.scss */
   .content .padded {
     max-width: 1200px;
     margin-left: auto;
@@ -2296,14 +2302,14 @@ a.button:visited {
     display: block;
     clear: both;
   }
-  /* line 772, ../sass/partials/_jcurranstyle.scss */
+  /* line 775, ../sass/partials/_jcurranstyle.scss */
   .content .padded .inner-pad {
     width: 66.10169%;
     float: left;
     margin-right: 1.69492%;
   }
 
-  /* line 777, ../sass/partials/_jcurranstyle.scss */
+  /* line 780, ../sass/partials/_jcurranstyle.scss */
   .featured {
     min-height: 500px;
     max-width: 100%;
@@ -2316,7 +2322,7 @@ a.button:visited {
     display: block;
     clear: both;
   }
-  /* line 780, ../sass/partials/_jcurranstyle.scss */
+  /* line 783, ../sass/partials/_jcurranstyle.scss */
   .featured .featured-bounds {
     max-width: 1200px;
     margin-left: auto;
@@ -2328,7 +2334,7 @@ a.button:visited {
     display: block;
     clear: both;
   }
-  /* line 787, ../sass/partials/_jcurranstyle.scss */
+  /* line 790, ../sass/partials/_jcurranstyle.scss */
   .featured.two .featured-bounds p {
     margin-left: 16.94915%;
     width: 66.10169%;
@@ -2336,24 +2342,24 @@ a.button:visited {
     margin-right: 1.69492%;
     margin-bottom: 0;
   }
-  /* line 795, ../sass/partials/_jcurranstyle.scss */
+  /* line 798, ../sass/partials/_jcurranstyle.scss */
   .featured.three .description, .featured.five .description {
     font-size: 1.5em;
   }
-  /* line 799, ../sass/partials/_jcurranstyle.scss */
+  /* line 802, ../sass/partials/_jcurranstyle.scss */
   .featured.seven {
     min-height: 500px;
   }
-  /* line 801, ../sass/partials/_jcurranstyle.scss */
+  /* line 804, ../sass/partials/_jcurranstyle.scss */
   .featured.seven h3 {
     font-size: 1.5em;
   }
-  /* line 807, ../sass/partials/_jcurranstyle.scss */
+  /* line 810, ../sass/partials/_jcurranstyle.scss */
   .featured.seven .featured-bounds .univ .unit span, .featured.seven .featured-bounds .corp1 .unit span, .featured.seven .featured-bounds .corp2 .unit span {
     font-size: .9em;
   }
 
-  /* line 815, ../sass/partials/_jcurranstyle.scss */
+  /* line 818, ../sass/partials/_jcurranstyle.scss */
   .subpage-menu {
     width: 66.10169%;
     float: left;
@@ -2361,13 +2367,13 @@ a.button:visited {
     font-size: .7em;
   }
 
-  /* line 819, ../sass/partials/_jcurranstyle.scss */
+  /* line 822, ../sass/partials/_jcurranstyle.scss */
   .topic, .subtopic {
     background-position: 0 10px;
     background-size: 36px 36px;
   }
 
-  /* line 824, ../sass/partials/_jcurranstyle.scss */
+  /* line 827, ../sass/partials/_jcurranstyle.scss */
   .gallery .thumb {
     width: 44.44444%;
     float: left;
@@ -2385,7 +2391,7 @@ a.button:visited {
     margin-right: -100%;
     clear: none;
   }
-  /* line 826, ../sass/partials/_jcurranstyle.scss */
+  /* line 829, ../sass/partials/_jcurranstyle.scss */
   .gallery .thumb img {
     width: 100%;
     float: left;
@@ -2399,32 +2405,32 @@ a.button:visited {
   src: url("/images/fonts/icomoon.woff") format("woff"), url("/images/fonts/icomoon.ttf") format("truetype");
   /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
 }
-/* line 839, ../sass/partials/_jcurranstyle.scss */
+/* line 842, ../sass/partials/_jcurranstyle.scss */
 .icon-mail4:before {
   content: "\ea86";
   font-family: 'icomoon';
 }
 
-/* line 843, ../sass/partials/_jcurranstyle.scss */
+/* line 846, ../sass/partials/_jcurranstyle.scss */
 .icon-twitter:before {
   content: "\ea91";
   font-family: 'icomoon';
 }
 
-/* line 847, ../sass/partials/_jcurranstyle.scss */
+/* line 850, ../sass/partials/_jcurranstyle.scss */
 .icon-linkedin:before {
   content: "\eac8";
   font-family: 'icomoon';
 }
 
-/* line 851, ../sass/partials/_jcurranstyle.scss */
+/* line 854, ../sass/partials/_jcurranstyle.scss */
 .icon-check-alt:before {
   content: "\e600";
   font-family: 'icomoon';
   font-size: .8em;
 }
 
-/* line 856, ../sass/partials/_jcurranstyle.scss */
+/* line 859, ../sass/partials/_jcurranstyle.scss */
 .icon-grid:before {
   content: "\e602";
   font-family: 'icomoon';
