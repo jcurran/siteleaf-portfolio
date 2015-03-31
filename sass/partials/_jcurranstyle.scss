@@ -79,6 +79,9 @@ body {
   }
   ul {
     padding: 15px;
+    &.bulleted {
+      list-style: square inside none;
+    }
   }
   .padded {
     padding: 15px;
@@ -161,23 +164,28 @@ a {
 h1 {
   font-size: 2em;
   margin: .25em 0 2em;
+  color: $primary;
 }
 h2 {
   font-size: 1.5em;
   margin: 1em 0 .5em;
+  color: $primary;
 }
 h3 {
-  font-size: 1em;
-  margin-top: .5em;
+  font-size: 1.25em;
+  margin: .5em 0 .25em;
+  color: $bodytext;
 }
 h1, h2, h3 {
   line-height: 1.05;
-  color: $primary;
   text-shadow: 0 .5px 0 $brightest;
 }
 p {
   color: $bodytext;
   margin-bottom: 1em;
+  &.before-list {
+    margin-bottom: 0;
+  }
 }
 b, strong {
   font-weight: 600;
@@ -344,7 +352,23 @@ background-color: #61b544;background-image:url('data:image/svg+xml;base64,PHN2Zy
   }
   &.six {
     background-color: #ddd;
-    box-shadow: inset 0 .5px 1px $bodytext;    
+    box-shadow: inset 0 .5px 1px $bodytext;
+    h2 {
+      margin: .5em 0 1em;
+    }
+    .project {
+      @include span(3 of 9);
+    }
+    .project-last {
+      @include span(3 of 9 last);
+    }
+    img {
+      @include span(2 of 3);
+      box-shadow: 0 1px 2px $bodytext;
+    }
+    span {
+      @include span(3 of 3);    
+    }
   }
   &.seven {
     background-color: $contrast;
@@ -427,7 +451,10 @@ background-color: #61b544;background-image:url('data:image/svg+xml;base64,PHN2Zy
   .thumb {
     color: $primary;
     display: block;
+    line-height: 1.25;
     margin-bottom: 1em;
+    @include span(3 of 4);
+    @include post(1 of 4);
     img {
       @include span(1 of 1);
       margin-top: 1em;
@@ -510,7 +537,7 @@ a {
   .topic, .subtopic {
     background-position: 0 9px;
     background-size: 34px 34px;
-  }
+  }  
   .gallery {
     .thumb {
       @include gallery(1 of 2);
@@ -545,7 +572,7 @@ a {
         }
       }
     }
-    &.three {
+    &.three, &.five {
       .description {
         font-size: 1.25em;
       }
@@ -609,7 +636,7 @@ a {
         }          
       }
     }
-    &.three {
+    &.three, &.five {
       .description {
         font-size: 1.4em;
       }
@@ -684,7 +711,7 @@ a {
         }
       }
     }
-    &.three {
+    &.three, &.five {
       .description {
         font-size: 1.5em;
       }
@@ -764,7 +791,7 @@ a {
         }
       }
     }
-    &.three {
+    &.three, &.five {
       .description {
         font-size: 1.5em;
       }
