@@ -651,6 +651,9 @@ a {
       .featured-bounds {
         .univ, .corp1, .corp2 {
           .unit {
+            img {
+              @include span(2 of 3);
+            }
             span {
               font-size: .9em;
             }
@@ -727,6 +730,9 @@ a {
       .featured-bounds {
         .univ, .corp1, .corp2 {
           .unit {
+            img {
+              @include span(2 of 3);
+            }
             span {
               font-size: .9em;
             }
@@ -807,6 +813,9 @@ a {
       .featured-bounds {
         .univ, .corp1, .corp2 {
           .unit {
+            img {
+              @include span(2 of 3);
+            }
             span {
               font-size: .9em;
             }
