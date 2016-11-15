@@ -80,11 +80,18 @@ body {
   ul {
     padding: 15px;
     &.bulleted {
-      list-style: square inside none;
+      list-style: square outside none;
+      margin-left: 1em;
+      padding-left: .5em;
+      margin-top: 0;
+      padding-top: 0;
     }
   }
   .padded {
     padding: 15px;
+  }
+  li {
+    padding-left: .5em;
   }
 }
 aside { 
@@ -173,6 +180,7 @@ h2 {
 }
 h3 {
   font-size: 1.25em;
+  font-weight: 600;
   margin: .5em 0 .25em;
   color: $bodytext;
 }
@@ -204,6 +212,10 @@ img {
 .sc {
   @include sc;
 }
+dt {
+	font-weight: 600;
+}
+
 
 /* Menus */
 .page-menu {
@@ -227,6 +239,8 @@ img {
         &:visited { color: $primary; }
         &:hover { text-decoration: none; }
       }
+    }
+    &:nth-child(2) { // "contact"
     }
   }
 }
@@ -292,6 +306,16 @@ img {
         color: $brightest;
       }
     }
+    hr {
+      @include span(12 of 12 last);
+    }
+    h2 {
+      @include span(6 of 12);
+      color: $brightest;
+    }
+    img {
+      @include span(6 of 12 last);
+    }
   }
   &.three {
 //    background: url(/assets/textl8r-background.jpg);
@@ -353,7 +377,7 @@ background-color: #61b544;background-image:url('data:image/svg+xml;base64,PHN2Zy
       @include span(6 of 12 last);
     }
   }
-  &.six {
+  &.six, &.nine {
     background-color: #ddd;
     box-shadow: inset 0 .5px 1px $bodytext;
     h2 {
@@ -370,8 +394,19 @@ background-color: #61b544;background-image:url('data:image/svg+xml;base64,PHN2Zy
       box-shadow: 0 1px 2px $bodytext;
     }
     span {
-      @include span(3 of 3);    
+      @include span(3 of 3);
+      line-height: 1.2;  
     }
+  }
+  &.nine {
+    background-color: #bbb;
+    h2 {
+      text-shadow: 0 -.5px 0 $contrast;
+    }
+    span {
+      @include span(3 of 3);
+      line-height: 1.2;  
+    }    
   }
   &.seven {
     background-color: $contrast;
@@ -441,6 +476,34 @@ background-color: #61b544;background-image:url('data:image/svg+xml;base64,PHN2Zy
       }
     }
   }
+	&.eight {
+		background: #fff url(/assets/bcsa-background1.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center 25%;
+		box-shadow: inset 0 .5px 1px $darkest;
+		padding-top: .5em;
+		.description {
+			h2 {
+				@include span(12);
+				text-shadow: 0 -.5px 0 #0067B0;
+				font-weight: 600;
+				color: $brightest;
+				margin: 0;
+			}
+			img {
+				@include span(5 of 12);
+			}
+			h3 {
+				@include span(5 of 12);
+				font-size: 1em;
+				margin-top: 1em;
+				color: $brightest;
+        text-shadow: 0 -.5px 0 $contrast;
+        font-weight: 400;
+			}
+		}
+	}
 }
 
 /* Gallery */
@@ -525,6 +588,14 @@ a {
     display: none;
 }
 
+.blog h1 {
+	color: $bodytext; 
+	font-weight: 400;
+	span {
+		font-weight: 600;
+	}
+}
+
 /* Media queries */
 @media screen and (min-width: 501px) and (max-width: 700px) {
   body {
@@ -536,6 +607,14 @@ a {
   }
   .featured {
     min-height: 260px;
+		&.eight {
+			.description {
+				font-size: 1.2em;
+				h3 {
+					margin-top: 1.2em;
+				}
+			}
+		}
   }
   .topic, .subtopic {
     background-position: 0 9px;
@@ -591,10 +670,18 @@ a {
         }
       }
     }
+		&.eight {
+			.description {
+				font-size: 1.3em;
+				h3 {
+					margin-top: 1.3em;
+				}
+			}
+		}
   }
   .subpage-menu {
     font-size: .9em;
-    @include span(10 of 12);
+    @include span(12);
   }
   .topic, .subtopic {
     background-position: 0 9px;
@@ -661,10 +748,18 @@ a {
         }
       }
     }
+		&.eight {
+			.description {
+				font-size: 1.4em;
+				h3 {
+					margin-top: 1.4em;
+				}
+			}
+		}
   }
   .subpage-menu {
     font-size: .9em;
-    @include span(8 of 12);
+    @include span(12);
   }
   .topic, .subtopic {
     background-position: 0 10px;
@@ -740,10 +835,18 @@ a {
         }
       }
     }
+		&.eight {
+			.description {
+				font-size: 1.5em;
+				h3 {
+					margin-top: 1.5em;
+				}
+			}
+		}
   }
   .subpage-menu {
     font-size: .85em;
-    @include span(8 of 12);
+    @include span(12);
   }
   .topic, .subtopic {
     background-position: 0 10px;
@@ -823,9 +926,17 @@ a {
         }
       }
     }
+		&.eight {
+			.description {
+				font-size: 1.6em;
+				h3 {
+					margin-top: 1.6em;
+				}
+			}
+		}
   }
   .subpage-menu {
-    @include span(8 of 12);
+    @include span(12);
     font-size: .7em;
   }
   .topic, .subtopic {
@@ -870,5 +981,6 @@ a {
     font-family: 'icomoon';
 }
 
-@include sticky-footer (190px, ".wrap", ".content-footer", "footer");
+@include sticky-footer (228px, ".wrap", ".content-footer", "footer");
 /* end jcurran custom styles */
+

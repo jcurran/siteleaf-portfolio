@@ -1,0 +1,28 @@
+{% capture body %}
+    <section class="layer blog">
+        <div class="padded">
+            <div class="inner-pad">
+                <h1><span>Maps & mazes</span> blog</h1>
+                {% if type == 'post' %}
+                    {% assign post = current %}
+                    {% if post.title %}
+                    <h2 class="">{{ post.title }}</h2>
+                    <p>{{ post.body }}</p>
+                    {% endif %}
+                {% else %}
+                    {% for post in posts limit: 4 %}
+                        <h2>{{ post.title }}</h2>
+                        <p>{{ post.date | date: "%B %Y" }}</p>
+                        <p>{{ post.excerpt }}</p>
+                        <a href="{{post.url}}" class="btn btn-link">Read more</a>
+                    {% endfor %}
+                {% endif %}
+            </div>
+            <div class="sidebar">
+                xxxx
+            </div>
+        </div>
+    </section>
+{% endcapture %}
+
+{% include 'layouts/default' %}

@@ -5,3 +5,5 @@ This is the website of Jim Curran UI Designer.
 - Run bundle install in the root
 - Run compass watch in the sass directory
 - CSS files are written to the stylesheets directory
+- Run gem install siteleaf
+
