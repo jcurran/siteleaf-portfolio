@@ -1,4 +1,4 @@
-This is the website of Jim Curran UI Designer.
+This is the website of Jim Curran Information Designer.
 
 - CMS: Siteleaf
 - Markup: HTML, Liquid
